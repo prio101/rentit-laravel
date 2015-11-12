@@ -1,0 +1,33 @@
+Thank you so much for try Dashgum. If you like the free version, you will love the premium one. 
+
+Some features included in the premium version:
+
+* Built using Bootstrap 3.2
+* 33 HTMLs lovely crafted
+* Uses Font Awesome 4.1
+* Google Fonts
+* Latest jquery
+* jQuery NiceScroll
+* jQuery Sparklines
+* Chart JS
+* Morris Charts
+* xChart JS
+* Flot Chart
+* Easy Pie Chart
+* Form Validation
+* Bootstrap Date, datetime, time, date range picker
+* WYSIHTML5 Editor
+* Full Calendar
+* Gritter (Notifications)
+* Google Maps
+* Form Component
+* Dropzone File Upload
+* Multiple File Uploader
+* Dynamic Table
+* Responsive Table
+* Inline Text Editor
+* Documentation Included
+* Free Support Provided
+* Much more
+
+Check it now: http://gridgum.com/themes/dashgum-bootstrap-dashboard/
