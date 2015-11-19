@@ -1,5 +1,7 @@
 <?php
 
+use App\Model ;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -19,3 +21,17 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(BookingsModel::class , function(Faker\Generator $faker) {
+    return [
+        'client_id' => $faker->randomDigitNotNull ,
+        'car_id'    => $faker->randomDigit ,
+        'receive_place' => $faker->address ,
+        'leaving_place' => $faker->address ,
+        'receive_date'  => $faker->date('Y-m-d') ,
+        'leaving_date'  => $faker->date() ,
+        'price_plan'    => $faker->randomDigit,
+        'promotion_code'=> $faker->randomDigit
+    ];
+}) ;
