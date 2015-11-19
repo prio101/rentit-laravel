@@ -15,4 +15,31 @@ Route::get('/', function(){
  return view('welcome') ;
 });
 
-Route::resource('admin','adminHomeController') ;
+
+
+/* ------------------------------------------------
+ **************************************************
+ * Admin panel
+ * ------------------------------------------------
+ * ************************************************
+ * @return response
+ * */
+
+Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
+
+/*GET the route of page /admin*/
+    Route::get('/' , 'adminHomeController@index');
+
+/*GET the route of the admin bookings panel by group*/
+    Route::group(['prefix'=>'bookings' , 'namespace' => 'Bookings'] , function(){
+//       GET the route of the Admin Bookings Panel
+        Route::get('/' , 'bookingsController@index') ;
+    }) ;
+/*GET the route of the admin Cars panel by Group*/
+    Route::group(['prefix'=>'cars','namespace'=>'Cars'] , function(){
+//        GET the route for Admin Cars Panel
+        Route::get('/', 'carsController@index') ;
+    }) ;
+/**/
+
+});
