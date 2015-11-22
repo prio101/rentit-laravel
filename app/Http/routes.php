@@ -34,6 +34,8 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
     Route::group(['prefix'=>'bookings' , 'namespace' => 'Bookings'] , function(){
 //       GET the route of the Admin Bookings Panel
         Route::get('/' , 'bookingsController@index') ;
+
+//        GET the bookings Completed filter
 //        GET the Add Bookings
         Route::get('/add' , 'bookingsController@create') ;
     }) ;
