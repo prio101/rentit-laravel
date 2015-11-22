@@ -16,7 +16,8 @@
 
         <div class="row mt">
             <div class="col-md-6 col-sm-8 col-lg-8">
-                <form class="form-horizontal style-form" method="get">
+                {{--<form class="form-horizontal style-form" method="get">--}}
+                    {!! Form::open(array('action'=>'bookingsController@store')) !!}
                     <div class="form-group">
                         <label class="col-sm-2 col-sm-2 control-label">Client ID (If Any)</label>
                         <div class="col-sm-10">
@@ -78,7 +79,7 @@
                     </div>
 
 
-                </form>
+                {!!Form::close()!!}
             </div>
         </div>
 
