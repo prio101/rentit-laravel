@@ -26,7 +26,15 @@ class BookingsPanelTest extends TestCase
         $this->visit('admin/bookings')->seeStatusCode(200) ;
     }
 
+    /*
+     * Test the Add Bookings Panel and its status code
+     *
+     * */
 
+    public function testBookingsAddPanel(){
+        $this->visit('admin/bookings/add')
+            ->seeStatusCode('200');
+    }
 
 
 

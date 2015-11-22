@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Model\BookingsModel;
+
 
 class bookingsController extends Controller
 {
@@ -16,7 +18,9 @@ class bookingsController extends Controller
      */
     public function index()
     {
-        return "Bookings Panel Here" ;
+       $bookings = BookingsModel::all() ;
+       return view('admin.bookings.index' , ['bookings' => $bookings] ) ;
+
     }
 
     /**
@@ -26,7 +30,7 @@ class bookingsController extends Controller
      */
     public function create()
     {
-        //
+       return view('admin.bookings.add.index');
     }
 
     /**

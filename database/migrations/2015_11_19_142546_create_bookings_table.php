@@ -23,6 +23,7 @@ class CreateBookingsTable extends Migration
             $table->date('leaving_date') ;
             $table->integer('price_plan') ;
             $table->integer('promotion_code') ;
+
         }) ;
 
     }
@@ -35,7 +36,7 @@ class CreateBookingsTable extends Migration
     public function down()
     {
         // Drop method for the Schema of Bookings Table
-        Schema::drop('bookings') ;
+        Schema::dropIfExists('bookings') ;
 
     }
 }
