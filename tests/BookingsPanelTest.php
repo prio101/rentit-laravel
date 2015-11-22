@@ -45,6 +45,13 @@ class BookingsPanelTest extends TestCase
 //        $this->get('admin/bookings')->seeJson() ;
 //    }
 
+    /*
+     * Test The Add Form data
+     * @return void
+     * */
+    public function testBookingsAddForm(){
+        $this->visit('admin/bookings/add')->type('client id' , 'client-id')->press('Save')->post('admin/bookings/add') ;
+    }
 
 
 }

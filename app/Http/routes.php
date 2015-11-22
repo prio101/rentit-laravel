@@ -38,6 +38,8 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 //        GET the bookings Completed filter
 //        GET the Add Bookings
         Route::get('/add' , 'bookingsController@create') ;
+//        Post the bookings Form
+        Route::post('/add' , 'bookingsController@store');
     }) ;
 /*GET the route of the admin Cars panel by Group*/
     Route::group(['prefix'=>'cars','namespace'=>'Cars'] , function(){

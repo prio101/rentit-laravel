@@ -16,69 +16,88 @@
 
         <div class="row mt">
             <div class="col-md-6 col-sm-8 col-lg-8">
-                <form class="form-horizontal style-form" method="get">
+
+                    {!! Form::open(array('action'=>'Admin\Bookings\bookingsController@store' , 'class'=>'form-horizontal style-form')) !!}
+
+
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Client ID (If Any)</label>
+
+                        {!! Form::label('client-id','Client ID (If Any)',array('class'=>'col-sm-2 col-sm-2 control-label')) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="XXXXXX-XXXX">
+                            {!! Form::text('client-id',null,array('class'=>'form-control','placeholder'=>'xxxx-xxx')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Car ID </label>
+
+                        {!! Form::label('car-id' ,'Car ID ' , array('class'=>'col-sm-2 col-sm-2 control-label') ) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="XXXXXX-XXXX">
+
+                        {!! Form::text('car-id' , null , array('class'=>'form-control' , 'placeholder'=>'XXXXXX-XXXX')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Receive Place</label>
+
+                        {!! Form::label('receive-place' , 'Receive Place' , array('class'=>'col-sm-2 col-sm-2 control-label' )) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Example Address">
+
+                            {!! Form::text('car-id' , null , array('class'=>'form-control' , 'placeholder'=>'Example Address')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Leaving  Place</label>
+
+                        {!! Form::label('leaving-place' , 'Leaving  Place' , array('class'=>'col-sm-2 col-sm-2 control-label')) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Example Address">
+
+                            {!! Form::text('leaving-place' , null , array('class'=>'form-control' , 'placeholder' => 'Example Address')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Receive Date</label>
+
+                        {!! Form::label('receive-date', 'Receive Date' ,array('class'=>'col-sm-2 col-sm-2 control-label') ) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="dd-mm-YYYY">
+
+                            {!! Form::text('receive-date' , null , array('class'=>'form-control' , 'placeholder' =>'dd-mm-YYYY')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Leaving Place</label>
+
+                        {!! Form::label('leaving-date' , 'Leaving Date',array('class'=>'col-sm-2 col-sm-2 control-label')) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="dd-mm-YYYY">
+
+                            {!! Form::text('leaving-date' , null , array('class'=>'form-control' , 'placeholder' => 'dd-mm-YYYY')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Price Plan</label>
+
+                        {!! Form::label('price-plan' , 'Price Plan' , array('class'=>'col-sm-2 col-sm-2 control-label')) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Price Plan Name">
+
+                            {!! Form::text('price-plan',null , array('class'=>'form-control' , 'placeholder' =>'Price Plan Name')) !!}
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 col-sm-2 control-label">Promotion Code</label>
+
+                        {!! Form::label('promotion-code' , 'Promotion-code' , array('class'=>'col-sm-2 col-sm-2 control-label')) !!}
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="xxxx">
+
+                            {!! Form::text('promotion-code' , null , array('class'=>'form-control' , 'placeholder'=>'xxxx')) !!}
                         </div>
                     </div>
 
                     <div class="text-center">
-                        <input type="submit" class="btn btn-theme03 btn-lg" value="Save">
+
+                        {!! Form::submit('Save' ,  array('class'=>'btn btn-theme03 btn-lg')) !!}
                     </div>
 
 
-                </form>
+                {!! Form::close() !!}
             </div>
         </div>
 
