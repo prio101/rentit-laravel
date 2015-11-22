@@ -28,7 +28,7 @@ class AddTimeStampOnBookingsTable extends Migration
     {
         Schema::table('bookings', function (Blueprint $table) {
             //Dropping if exists
-            $table->dropColumn([
+            $table->dropIfExists([
                 'created_at',
                 'updated_at'
             ]);

@@ -20,8 +20,8 @@ class BookingsTableSeeder extends Seeder
         DB::table('bookings')->insert([
             'client_id'     => random_int(1 , 1000),
             'car_id'        => random_int(1 , 1000) ,
-            'receive_place' => Faker\Provider\en_US\Address::state() ,
-            'leaving_place' => Faker\Provider\en_US\Address::state() ,
+            'receive_place' => Faker\Provider\bn_BD\Address::state() ,
+            'leaving_place' => Faker\Provider\bn_BD\Address::state() ,
             'receive_date'  => \Faker\Provider\DateTime::date('Y-m-d') ,
             'leaving_date'  => \Faker\Provider\DateTime::dateTimeThisMonth() ,
             'price_plan'    => random_int(1 , 10),

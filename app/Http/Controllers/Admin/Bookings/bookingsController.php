@@ -19,7 +19,10 @@ class bookingsController extends Controller
     public function index()
     {
        $bookings = BookingsModel::all() ;
+       $bookings->toJson() ;
+
        return view('admin.bookings.index' , ['bookings' => $bookings] ) ;
+       //return $bookings->toJson();
 
     }
 

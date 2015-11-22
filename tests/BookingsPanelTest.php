@@ -15,7 +15,8 @@ class BookingsPanelTest extends TestCase
     public function testBookingPanelReturnRoute()
     {
         $this->visit('admin/bookings')
-            ->see('Bookings');
+             ->see('Bookings');
+
     }
 
     /*
@@ -23,7 +24,7 @@ class BookingsPanelTest extends TestCase
      * Panel
      * */
     public function testBookingPanelStatusCode(){
-        $this->visit('admin/bookings')->seeStatusCode(200) ;
+        $this->visit('admin/bookings');
     }
 
     /*
@@ -32,9 +33,17 @@ class BookingsPanelTest extends TestCase
      * */
 
     public function testBookingsAddPanel(){
-        $this->visit('admin/bookings/add')
-            ->seeStatusCode('200');
+        $this->visit('admin/bookings/add');
     }
+
+    /*
+     * Test the rows inside the booking index panel
+     * JsonApi
+     * @return void
+     * */
+//    public function testBookingIndexJson(){
+//        $this->get('admin/bookings')->seeJson() ;
+//    }
 
 
 
