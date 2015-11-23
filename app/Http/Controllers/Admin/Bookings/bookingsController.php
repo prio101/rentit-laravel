@@ -26,6 +26,36 @@ class bookingsController extends Controller
 
     }
 
+    /*
+     * Display a listing of the resource by status Completed
+     * @return void
+    * */
+    public function completedList(){
+        $bookingsCompleted = BookingsModel::all()->where('status','1');
+
+        return view('admin.bookings.completedIndex',['bookingsCompleted'=>$bookingsCompleted]) ;
+    }
+
+    /*
+     * Display a listing of the resources by status Ongoing
+     * @return void
+     * */
+    public function ongoingList(){
+        $bookingsOngoing = BookingsModel::all()->where('status','2');
+
+        return view('admin.bookings.ongoingIndex',['bookingsOngoing'=>$bookingsOngoing]);
+    }
+
+    /*
+     * Display a listing of resources by status Upcoming
+     * @return void
+     * */
+    public function upcomingList(){
+        $bookingsUpcoming = BookingsModel::all()->where('status','3');
+
+        return view('admin.bookings.upcomingIndex',['bookingsUpcoming'=>$bookingsUpcoming]) ;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -35,6 +65,8 @@ class bookingsController extends Controller
     {
        return view('admin.bookings.add.index');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -46,6 +78,8 @@ class bookingsController extends Controller
     {
         //
     }
+
+
 
     /**
      * Display the specified resource.

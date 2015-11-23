@@ -36,6 +36,14 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::get('/' , 'bookingsController@index') ;
 
 //        GET the bookings Completed filter
+        Route::get('/completed', 'bookingsController@completedList') ;
+
+//        GET the bookings of ongoing Filter
+        Route::get('/ongoing','bookingsController@ongoingList');
+
+//        GET the bookings of upcoming list
+        Route::get('/upcoming','bookingsController@upcomingList');
+
 //        GET the Add Bookings
         Route::get('/add' , 'bookingsController@create') ;
 //        Post the bookings Form

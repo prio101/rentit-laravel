@@ -213,9 +213,9 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ url('admin/bookings') }}">All Bookings</a></li>
-                        <li><a  href="general.html">Completed</a></li>
-                        <li><a  href="buttons.html">Ongoing</a></li>
-                        <li><a  href="panels.html">Upcoming</a></li>
+                        <li><a  href="{{ url('admin/bookings/completed') }}">Completed</a></li>
+                        <li><a  href="{{ url('admin/bookings/ongoing') }}">Ongoing</a></li>
+                        <li><a  href="{{ url('admin/bookings/upcoming') }}">Upcoming</a></li>
                     </ul>
                 </li>
 

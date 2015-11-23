@@ -24,7 +24,15 @@ class BookingsPanelTest extends TestCase
      * Panel
      * */
     public function testBookingPanelStatusCode(){
-        $this->visit('admin/bookings');
+        $this->visit('admin/bookings')
+             ->seeStatusCode(200);
+    }
+
+    /*
+     * Test of booking completed list
+     * */
+    public function testBookingCompleted(){
+
     }
 
     /*
@@ -33,7 +41,8 @@ class BookingsPanelTest extends TestCase
      * */
 
     public function testBookingsAddPanel(){
-        $this->visit('admin/bookings/add');
+        $this->visit('admin/bookings/add')
+             ->seeStatusCode(200);
     }
 
     /*
@@ -50,7 +59,10 @@ class BookingsPanelTest extends TestCase
      * @return void
      * */
     public function testBookingsAddForm(){
-        $this->visit('admin/bookings/add')->type('client id' , 'client-id')->press('Save')->post('admin/bookings/add') ;
+        $this->visit('admin/bookings/add')
+             ->type('client id' , 'client-id')
+             ->press('Save')
+             ->post('admin/bookings/add') ;
     }
 
 
