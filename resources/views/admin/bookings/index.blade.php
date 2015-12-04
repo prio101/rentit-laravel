@@ -77,11 +77,24 @@
                             <td>{{$booking->leaving_date}}</td>
                             <td>{{$booking->price_plan}}</td>
                             <td>{{$booking->promotion_code}}</td>
-                            <td><span class="label label-info label-mini">Due</span></td>
                             <td>
-                                <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                @if($booking->status == 1)
+                                    <span class="label label-success label-mini">Completed</span>
+                                    @elseif($booking->status == 2)
+                                    <span class="label label-warning label-mini">On Service</span>
+                                    @elseif($booking->status == 3)
+                                    <span class="label label-info label-mini">Upcoming</span>
+                                @endif
+                            </td>
+                            <td>
+
+
+                                    <a href="{{ url('admin/bookings/'.$booking->id.'/edit') }}" class="btn btn-primary btn-xs">Edit</a>
+
+                                {!! Form::open(array('url'=>'admin/bookings/delete/'.$booking->id )) !!}
+                                    {!! Form::hidden('_method' , 'DELETE') !!}
+                                    {!! Form::submit('Delete' , array('class'=>'btn btn-warning btn-xs')) !!}
+                                {!! Form::close() !!}
                             </td>
                             </tr>
                             @endforeach

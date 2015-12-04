@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Model\BookingsModel;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 
 class bookingsController extends Controller
@@ -19,7 +23,7 @@ class bookingsController extends Controller
     public function index()
     {
        $bookings = BookingsModel::all() ;
-       $bookings->toJson() ;
+
 
        return view('admin.bookings.index' , ['bookings' => $bookings] ) ;
        //return $bookings->toJson();
@@ -76,7 +80,56 @@ class bookingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*Validation*/
+
+        $rules =[
+                'client-id' => 'required',
+                'car-id'    => 'required' ,
+                'receive-place' => 'required' ,
+                'leaving-place' => 'required' ,
+                'receive-date'  => 'required' ,
+                'leaving-date'  => 'required' ,
+                'price-plan'    => 'required' ,
+                'promotion-code' => 'required'
+
+
+        ];
+
+
+        /*Piping through the validator class*/
+
+        $validator = Validator::make(Input::all() , $rules);
+
+        /*Checking Condition*/
+
+        if($validator->fails()){
+           return Redirect::to('admin/bookings')->withErrors($validator)->withInput();
+        }
+        else{
+            /*Store data*/
+            $booking = new BookingsModel() ;
+
+            $booking->client_id = Input::get('client-id') ;
+            $booking->car_id = Input::get('car-id') ;
+            $booking->receive_place = Input::get('receive-place') ;
+            $booking->leaving_place = Input::get('leaving-place') ;
+            $booking->receive_date  = Input::get('receive-date') ;
+            $booking->leaving_date  = Input::get('leaving-date') ;
+            $booking->price_plan    = Input::get('price-plan') ;
+            $booking->promotion_code = Input::get('promotion-code') ;
+
+            $booking->save();
+
+            /*Redirect with success message*/
+            Session::flash('message' , 'Booking saved') ;
+
+            return Redirect::to('admin/bookings') ;
+
+        }
+
+
+
+
     }
 
 
@@ -89,7 +142,7 @@ class bookingsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -101,6 +154,15 @@ class bookingsController extends Controller
     public function edit($id)
     {
         //
+
+        //Loading model by ID
+        $booking =new BookingsModel() ;
+        $booking = $booking->find($id);
+
+
+
+        //Showing the specified data
+        return view('admin.bookings.update.index' ,['booking'=>$booking]);
     }
 
     /**
@@ -113,6 +175,8 @@ class bookingsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //Loading model by ID
+
     }
 
     /**
@@ -123,6 +187,17 @@ class bookingsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Taking the model bind
+        $booking = BookingsModel::find($id);
+
+        //Getting ID and deleting it
+        $booking->delete() ;
+
+        //Redirect
+        Session::flash('message' , 'Deleted The Booking data');
+
+        return Redirect::to('admin/bookings') ;
+
+
     }
 }

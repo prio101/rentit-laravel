@@ -15,10 +15,20 @@
         <hr>
 
         <div class="row mt">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>#&nbsp;{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="col-md-6 col-sm-8 col-lg-8">
 
-                    {!! Form::open(array('action'=>'Admin\Bookings\bookingsController@store' , 'class'=>'form-horizontal style-form')) !!}
 
+                {!! Form::open(array('action'=>'Admin\Bookings\bookingsController@store' , 'class'=>'form-horizontal style-form')) !!}
+                {{--{{ csrf_token() }}--}}
 
                     <div class="form-group">
 
@@ -42,7 +52,7 @@
                         {!! Form::label('receive-place' , 'Receive Place' , array('class'=>'col-sm-2 col-sm-2 control-label' )) !!}
                         <div class="col-sm-10">
 
-                            {!! Form::text('car-id' , null , array('class'=>'form-control' , 'placeholder'=>'Example Address')) !!}
+                            {!! Form::text('receive-place' , null , array('class'=>'form-control' , 'placeholder'=>'Example Address')) !!}
                         </div>
                     </div>
 

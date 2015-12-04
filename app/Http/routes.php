@@ -48,6 +48,14 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::get('/add' , 'bookingsController@create') ;
 //        Post the bookings Form
         Route::post('/add' , 'bookingsController@store');
+//        Delete the booking
+        Route::DELETE('/delete/{id}' ,'bookingsController@destroy' ) ;
+
+//        Edit Page View
+        Route::GET('/{id}/edit' , 'bookingsController@edit') ;
+//        Update Page Request
+        Route::PATCH('/{id}' , 'bookingsController@update') ;
+
     }) ;
 /*GET the route of the admin Cars panel by Group*/
     Route::group(['prefix'=>'cars','namespace'=>'Cars'] , function(){
