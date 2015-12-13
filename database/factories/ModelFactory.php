@@ -23,7 +23,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 
-$factory->define(BookingsModel::class , function(Faker\Generator $faker) {
+$booking = $factory->define(BookingsModel::class , function(Faker\Generator $faker) {
     return [
         'client_id' => $faker->randomDigitNotNull ,
         'car_id'    => $faker->randomDigit ,
