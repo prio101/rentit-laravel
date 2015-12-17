@@ -15,9 +15,23 @@
         </div>
         <hr>
 
-        {!! Form::model('bookings') !!}
+        {{--{!! Form::model( $bookings = \App\Model\BookingsModel::findOrFail($id) , [--}}
+                        {{--'method'=>'PATCH' ,--}}
+                        {{--['url' => 'admin/bookings/{$id}/update/' , $bookings->id]--}}
+          {{--]) !!}--}}
 
+        <div class="row mt">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>#&nbsp;{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
+        </div>
 
     </section>
 </section>

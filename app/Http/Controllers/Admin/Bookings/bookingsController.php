@@ -156,13 +156,13 @@ class bookingsController extends Controller
         //
 
         //Loading model by ID
-        $booking =new BookingsModel() ;
-        $booking = $booking->find($id);
+        $bookings = BookingsModel::findOrFail($id) ;
 
 
 
         //Showing the specified data
-        return view('admin.bookings.update.index' ,['booking'=>$booking]);
+        return view('admin.bookings.update.index' , $bookings);
+
     }
 
     /**
