@@ -156,12 +156,12 @@ class bookingsController extends Controller
         //
 
         //Loading model by ID
-        $bookings = BookingsModel::findOrFail($id) ;
+        $bookings = BookingsModel::find($id) ;
 
 
 
         //Showing the specified data
-        return view('admin.bookings.update.index' , $bookings);
+        return view('admin.bookings.update.index')->with('bookings' , $bookings);
 
     }
 
@@ -175,7 +175,23 @@ class bookingsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        //Loading model by ID
+
+
+            $booking = BookingsModel::find($id) ;
+
+            $booking->client_id = Input::get('client_id') ;
+            $booking->car_id = Input::get('car_id') ;
+            $booking->receive_place = Input::get('receive_place') ;
+            $booking->leaving_place = Input::get('leaving_place') ;
+            $booking->receive_date  = Input::get('receive_date') ;
+            $booking->leaving_date  = Input::get('leaving_date') ;
+            $booking->price_plan    = Input::get('price_plan') ;
+            $booking->promotion_code = Input::get('promotion_code') ;
+
+            $booking->save();
+
+            return Redirect::to('/admin/bookings/');
+
 
     }
 

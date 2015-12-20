@@ -54,7 +54,7 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 //        Edit Page View
         Route::GET('/{id}/edit' , 'bookingsController@edit') ;
 //        Update Page Request
-        Route::PATCH('/{id}' , 'bookingsController@update') ;
+        Route::PATCH('/update/{id} ' , 'bookingsController@update') ;
 
     }) ;
 /*GET the route of the admin Cars panel by Group*/
