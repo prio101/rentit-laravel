@@ -14,10 +14,12 @@ class CarTableSeeder extends Seeder
     public function run()
     {
         //Create the car table seeder
-
+        $faker = Faker::person ;
         DB::table('cars')->insert(
             [
-                'name' => ''
+                'name' => $faker->titleMale(),
+                ''
+
             ]
         );
 
