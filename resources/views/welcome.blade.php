@@ -42,6 +42,26 @@
                 background-size: cover;
 
             }
+            .btn{
+                border-radius: 11%;
+                border-color: #00c5de;
+                background-color: #00c5de;
+                padding: 2%;
+                color: #fff;
+                text-align: center;
+                font-size: 0.2em;
+                font-weight: 900;
+                text-decoration: none;
+
+            }
+             a:hover{
+               transition: background-color 0.5s ease;
+                 -moz-transition: background-color 0.5s ease;
+                 -webkit-transition: background-color 0.5s ease;
+                 -o-transition: background-color 0.5s ease;
+                 background-color: #fff;
+                 color:#00c5de;
+            }
         </style>
     </head>
     <body>
@@ -50,6 +70,8 @@
                 <div class="title">
 
                     <h2>RentIt System</h2>
+                   <a href="{{url('admin/')}}" class="btn">Admin Panel</a>
+                    <br>
                     <small>Developed By : Frost Mango</small>
 
                 </div>

@@ -16,7 +16,7 @@ class carsController extends Controller
      */
     public function index()
     {
-        return 'Cars List panel' ;
+        return view("admin.cars.index") ;
     }
 
     /**

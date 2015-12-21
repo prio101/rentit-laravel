@@ -219,6 +219,19 @@
                     </ul>
                 </li>
 
+                <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-car"></i>
+                        <span>Cars</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{ url('admin/cars') }}">All Cars</a></li>
+                        <li><a  href="{{ url('admin/bookings/completed') }}">On Garage</a></li>
+                        <li><a  href="{{ url('admin/bookings/ongoing') }}">On Repair</a></li>
+                        <li><a  href="{{ url('admin/bookings/upcoming') }}">On Service</a></li>
+                    </ul>
+                </li>
+
                 {{--<li class="sub-menu">--}}
                     {{--<a href="javascript:;" >--}}
                         {{--<i class="fa fa-cogs"></i>--}}
