@@ -65,6 +65,8 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::GET('/add' , 'carsController@create');
 //        Storing the data in the cars table
         Route::POST('/store' , 'carsController@store') ;
+//        Getting the specific car data
+        Route::GET('/show/{id}' , 'carsController@show') ;
     }) ;
 /**/
 

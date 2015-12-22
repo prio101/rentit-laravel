@@ -73,6 +73,16 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('Status'  ,'', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::select('status'  , ['1' => 'On Garage' , '2' => 'On Service' , '3' => 'On Repair'] , ['class'=>'form-control']) !!}
+
+
+                    </div>
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('Gearbox - Auto'  ,'', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">

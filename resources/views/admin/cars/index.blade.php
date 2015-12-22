@@ -38,9 +38,19 @@
 
                                     </div>
                                     <img src="{{asset('assets/img/cars')}}/{{$car->id}}-car-image.png" width="200" alt="{{$car->name}}">
+
+                                        @if($car->status == 1)
+                                            <span class="label label-info">On Garage
+                                        @elseif($car->status == 2)
+                                             <span class="label label-success">On Service
+                                        @else
+                                             <span class="label label-danger">On Repair
+                                        @endif
+
+                                    </span>
                                     <h5 class="mt">{{$car->name}}</h5>
                                     <h6>Milage : {{$car->fuel_usage}} KM/L</h6>
-                                    <a href="#" class="btn btn-small btn-theme04">More Data</a>
+                                    <a href="{{  url('admin/cars/show' , $car->id) }}" class="btn btn-small btn-theme04">More Data</a>
                                 </div>
                             </div><! --/col-md-4 -->
 

@@ -56,7 +56,8 @@ class carsController extends Controller
             'fuel_usage'=>'required',
             'max_passenger'=>'required',
             'price_plan'=>'required',
-            'features' => 'required'
+            'features' => 'required',
+            'status' => 'required'
 
 
         ] ;
@@ -76,6 +77,7 @@ class carsController extends Controller
             $cars->max_passenger = Input::get('max_passenger');
             $cars->price_plan = Input::get('price_plan');
             $cars->features = Input::get('features');
+            $cars->status = Input::get('status');
 
             $cars->save();
 
@@ -118,7 +120,11 @@ class carsController extends Controller
      */
     public function show($id)
     {
-        //
+        //Show a specific car data
+        $cars = CarsModel::findOrFail($id) ;
+
+        return view('admin.cars.show.index' , ['cars' => $cars]);
+
     }
 
     /**
@@ -129,7 +135,11 @@ class carsController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Edit data of the cars
+        $cars = CarsModel::findOrFail($id) ;
+
+
+        return view('admin.cars.edit.index' , ['cars' =>$cars]) ;
     }
 
     /**
