@@ -152,6 +152,7 @@ class carsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return "Updated";
     }
 
     /**

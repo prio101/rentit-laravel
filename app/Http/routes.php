@@ -67,6 +67,11 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::POST('/store' , 'carsController@store') ;
 //        Getting the specific car data
         Route::GET('/show/{id}' , 'carsController@show') ;
+//        Getting  the specific data car to edit
+        Route::GET('/{id}/edit', 'carsController@edit');
+
+//        Posting the update data
+        Route::PATCH('/update/{id}', 'carsController@update');
     }) ;
 /**/
 
