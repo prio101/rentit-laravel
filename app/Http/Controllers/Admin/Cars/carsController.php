@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin\Cars;
 
+use App\Model\CarsModel;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
@@ -18,7 +20,8 @@ class carsController extends Controller
      */
     public function index()
     {
-        return view("admin.cars.index") ;
+        $cars =  CarsModel::all();
+        return view("admin.cars.index" , ['cars' => $cars]) ;
     }
 
     /**
@@ -60,14 +63,51 @@ class carsController extends Controller
 
         $validator = Validator::make(Input::all() , $rules);
 
+        /*Conditions*/
+
+        if($validator){
+            $cars = new CarsModel();
+
+            $cars->name = Input::get('name');
+            $cars->fuel_type = Input::get('fuel_type');
+            $cars->class = Input::get('class');
+            $cars->gearbox = Input::get('gearbox');
+            $cars->fuel_usage = Input::get('fuel_usage');
+            $cars->max_passenger = Input::get('max_passenger');
+            $cars->price_plan = Input::get('price_plan');
+            $cars->features = Input::get('features');
+
+            $cars->save();
+
+            /*
+             * Saving the image
+             * */
+                $destinationPath = base_path('/public/assets/img/cars/') ;
+                $imageName = $cars->id.'-car-image.png';
+                //$imageName = $request->id.Input::file('image')->getClientOriginalName().'.'.getClientOriginalExtenstion();
+
+                $request->file('image')->move($destinationPath, $imageName);
+                $cars->image = $imageName ;
+                $cars->save();
+                return Redirect::to('admin/cars/') ;
 
 
-
-
+//            $imageName = $request->id.'.'.$request->file('image')->getClientOriginalExtension();
+//
+//            $request->file('image')->move( base_path().'/public/assets/img/cars/' , $imageName) ;
         /*
          * Returning to the cars section
          * */
-        return Redirect::to('admin/cars/') ;
+
+        }else{
+            return Redirect::to('admin/cars/create')->withErrors($validator)->withInput();
+        }
+
+
+
+
+
+
     }
 
     /**

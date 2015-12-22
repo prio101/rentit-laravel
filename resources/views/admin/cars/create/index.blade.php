@@ -27,16 +27,10 @@
             <div class="col-md-6 col-sm-8 col-lg-8">
 
 
-                {!! Form::open(array('action'=>'Admin\Cars\carsController@store' , 'class'=>'form-horizontal style-form form-panel')) !!}
+                {!! Form::open(array('action'=>'Admin\Cars\carsController@store' , 'class'=>'form-horizontal style-form form-panel' , 'novalidate'=>'novalidate' ,  'files'=>true)) !!}
                 {{--{{ csrf_token() }}--}}
 
-                <div class="form-group">
 
-                    {!! Form::label('client-id','Client ID (If Any)',array('class'=>'col-sm-2 col-sm-2 control-label')) !!}
-                    <div class="col-sm-10">
-                        {!! Form::text('client-id',null,array('class'=>'form-control','placeholder'=>'xxxx-xxx')) !!}
-                    </div>
-                </div>
 
                <div class="form-group">
                    {!! Form::label('Name of the car'  ,'', ['class'=>'col-sm-2 control-label']) !!}
@@ -62,7 +56,7 @@
                     {!! Form::label('Fuel Type'  ,'', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">
-                        {!! Form::select('fuel_type'  , ['Petrol' => 'Petrol' , 'Diesel' => 'Diesel' , 'Octane' => 'Octane'  , 'Gas' => 'Gas'] , ['class'=>'form-control']) !!}
+                        {!! Form::select('fuel_type'  , ['1' => 'Petrol' , '2' => 'Diesel' , '3' => 'Octane'  , '4' => 'Gas'] , ['class'=>'form-control']) !!}
 
 
                     </div>
@@ -72,7 +66,7 @@
                     {!! Form::label('Car Class'  ,'', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">
-                        {!! Form::select('class'  , ['Luxery' => 'Luxery' , 'Middle' => 'Middle' , 'Comfort' => 'Comfort'] , ['class'=>'form-control']) !!}
+                        {!! Form::select('class'  , ['1' => 'Luxery' , '2' => 'Middle' , '3' => 'Comfort'] , ['class'=>'form-control']) !!}
 
 
                     </div>
@@ -82,7 +76,7 @@
                     {!! Form::label('Gearbox - Auto'  ,'', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">
-                        {!! Form::checkbox('gearbox'  , 'Auto' , ['class'=>'form-control']) !!}
+                        {!! Form::checkbox('gearbox'  , '1' , ['class'=>'form-control']) !!}
 
 
                     </div>
@@ -112,7 +106,7 @@
                     {!! Form::label('Price Plan'  ,'', ['class'=>'col-sm-2 control-label']) !!}
 
                     <div class="col-sm-10">
-                        {!! Form::select('price_paln'  , ['Plan A' =>'Plan A' , 'Plan B' => 'Plan B' , 'Plan C' => 'Plan C'] , ['class'=>'form-control' , 'placeholder' => '4']) !!}
+                        {!! Form::select('price_plan'  , ['1' =>'Plan A' , '2' => 'Plan B' , '3' => 'Plan C'] , ['class'=>'form-control' , 'placeholder' => '4']) !!}
 
 
                     </div>

@@ -17,8 +17,8 @@ class CarTableSeeder extends Seeder
         $faker = Faker::person ;
         DB::table('cars')->insert(
             [
-                'name' => $faker->titleMale(),
-                ''
+//                'name' => 'Audi Model'.Faker::date('thisYear'),
+//                'fuel_type' => ''
 
             ]
         );
