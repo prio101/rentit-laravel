@@ -60,7 +60,11 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 /*GET the route of the admin Cars panel by Group*/
     Route::group(['prefix'=>'cars','namespace'=>'Cars'] , function(){
 //        GET the route for Admin Cars Panel
-        Route::get('/', 'carsController@index') ;
+        Route::GET('/', 'carsController@index') ;
+//        GET the route for the add of the car
+        Route::GET('/add' , 'carsController@create');
+//        Storing the data in the cars table
+        Route::POST('/store' , 'carsController@store') ;
     }) ;
 /**/
 

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class carsController extends Controller
 {
@@ -26,7 +28,8 @@ class carsController extends Controller
      */
     public function create()
     {
-        //
+        //Create car page
+        return view('admin.cars.create.index');
     }
 
     /**
@@ -37,7 +40,34 @@ class carsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        /*
+         * validator
+         * */
+        $rules = [
+            'name'=>'required' ,
+            'image' => 'required',
+            'fuel_type'=>'required',
+            'class'=>'required',
+            'gearbox'=>'required',
+            'fuel_usage'=>'required',
+            'max_passenger'=>'required',
+            'price_plan'=>'required',
+            'features' => 'required'
+
+
+        ] ;
+
+        $validator = Validator::make(Input::all() , $rules);
+
+
+
+
+
+        /*
+         * Returning to the cars section
+         * */
+        return Redirect::to('admin/cars/') ;
     }
 
     /**
