@@ -83,6 +83,8 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::PATCH('/update/{id}', 'carsController@update');
 
     }) ;
-/**/
+/*Price List Admin panel*/
+
+    
 
 });
