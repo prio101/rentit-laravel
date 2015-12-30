@@ -73,13 +73,15 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::POST('/store' , 'carsController@store') ;
 //        Getting the specific car data
         Route::GET('/show/{id}' , 'carsController@show') ;
+//        Destroy the car data
+        Route::DELETE('/delete/{id}' , 'carsController@destroy');
+
 //        Getting  the specific data car to edit
         Route::GET('/{id}/edit', 'carsController@edit');
 
 //        Posting the update data
         Route::PATCH('/update/{id}', 'carsController@update');
-//        Destroy the car data
-        Route::DELETE('/delete/{id}' , 'carsController@destroy');
+
     }) ;
 /**/
 

@@ -155,7 +155,7 @@ class carsController extends Controller
     public function show($id)
     {
         //Show a specific car data
-        $cars = CarsModel::findOrFail($id) ;
+        $cars = CarsModel::find($id) ;
 
         return view('admin.cars.show.index' , ['cars' => $cars]);
 
@@ -198,12 +198,14 @@ class carsController extends Controller
     public function destroy($id)
     {
         //
-        $cars = CarsModel::find($id);
+        $car = CarsModel::find($id);
 
-        $cars->delete();
+        $car->delete();
 
-        Session::flash('message' , 'Deleted Successfully');
+       // Session::flash('message' , 'Deleted Successfully');
 
-        return Redirect::to('admin/cars' );
+        return Redirect::to("admin/cars") ;
+
+
     }
 }

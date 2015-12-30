@@ -94,7 +94,10 @@
                 <a href="{{url('admin/cars' )}}/{{$cars->id}}/edit" class="btn btn-block btn-primary">Edit</a>
             </div>
             <div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-8 ">
-                <a href="{{url('admin/cars' )}}/delete/{{$cars->id}}" class="btn btn-block btn-danger">Delete</a>
+                {!! Form::open(array('url'=>'admin/cars/delete/'.$cars->id )) !!}
+                {!! Form::hidden('_method' , 'DELETE') !!}
+                {!! Form::submit('Delete' , array('class'=>'btn btn-warning btn-block')) !!}
+                {!! Form::close() !!}
             </div>
 
         </div>
