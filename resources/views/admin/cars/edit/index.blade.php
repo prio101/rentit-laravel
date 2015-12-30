@@ -5,10 +5,10 @@
 <section id="main-content">
     <section class="wrapper site-min-height">
         <div class="row mt">
-            <h3 class="title text-center">Add New Car</h3>
+            <h3 class="title text-center">Update New Car</h3>
 
             <div class="col-md-1">
-                <a href="{{ url('admin/cars') }}" class="btn btn-theme02 btn-lg" data-toggle="tooltip" title="Bookings All Panel" ><i class="fa  fa-chevron-left"></i>&nbsp;Go Back</a>
+                <a href="{{ url('admin/cars') }}" class="btn btn-theme02 btn-lg" data-toggle="tooltip" title="Cars All Panel" ><i class="fa  fa-chevron-left"></i>&nbsp;Go Back</a>
             </div>
 
         </div>

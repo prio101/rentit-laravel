@@ -25,6 +25,40 @@ class carsController extends Controller
     }
 
     /**
+     * Display a listing of the cars in garage
+     *
+     * @return \Illuminate\Http\Response
+     * */
+    public function onGarage(){
+        $cars = CarsModel::all()->whereLoose('status' , 1);
+
+        return view('admin.cars.on-garage' , ['cars' => $cars]) ;
+    }
+
+    /**
+     * Display a listing of the cars in service
+     *
+     * @return \Illuminate\Http\Response
+     * */
+    public function onService(){
+        $cars = CarsModel::all()->whereLoose('status' , 2) ;
+
+        return view('admin.cars.on-service' , ['cars' => $cars]);
+    }
+
+    /**
+     * Display a listing of the cars in repair
+     *
+     * @return \Illuminate\Http\Response
+     * */
+
+    public function onRepair(){
+        $cars = CarsModel::all()->whereLoose('status' , 3);
+
+        return view('admin.cars.on-repair' , ['cars'=> $cars]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -164,5 +198,12 @@ class carsController extends Controller
     public function destroy($id)
     {
         //
+        $cars = CarsModel::find($id);
+
+        $cars->delete();
+
+        Session::flash('message' , 'Deleted Successfully');
+
+        return Redirect::to('admin/cars' );
     }
 }

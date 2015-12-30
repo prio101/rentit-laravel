@@ -63,6 +63,12 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::GET('/', 'carsController@index') ;
 //        GET the route for the add of the car
         Route::GET('/add' , 'carsController@create');
+//        GET the list of the cars inside garage
+        Route::GET('/ongarage' , 'carsController@onGarage');
+//        GET the list of cars in service
+        Route::GET('/onservice' ,'carsController@onService');
+//        GET the list of cars on repair
+        Route::GET('/onrepair' , 'carsController@onRepair');
 //        Storing the data in the cars table
         Route::POST('/store' , 'carsController@store') ;
 //        Getting the specific car data
@@ -72,6 +78,8 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 
 //        Posting the update data
         Route::PATCH('/update/{id}', 'carsController@update');
+//        Destroy the car data
+        Route::DELETE('/delete/{id}' , 'carsController@destroy');
     }) ;
 /**/
 

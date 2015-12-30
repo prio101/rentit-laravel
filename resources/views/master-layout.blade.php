@@ -226,63 +226,13 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ url('admin/cars') }}">All Cars</a></li>
-                        <li><a  href="{{ url('admin/bookings/completed') }}">On Garage</a></li>
-                        <li><a  href="{{ url('admin/bookings/ongoing') }}">On Repair</a></li>
-                        <li><a  href="{{ url('admin/bookings/upcoming') }}">On Service</a></li>
+                        <li><a  href="{{ url('admin/cars/ongarage') }}">On Garage</a></li>
+                        <li><a  href="{{ url('admin/cars/onrepair') }}">On Repair</a></li>
+                        <li><a  href="{{ url('admin/cars/onservice') }}">On Service</a></li>
                     </ul>
                 </li>
 
-                {{--<li class="sub-menu">--}}
-                    {{--<a href="javascript:;" >--}}
-                        {{--<i class="fa fa-cogs"></i>--}}
-                        {{--<span>Components</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="sub">--}}
-                        {{--<li><a  href="calendar.html">Calendar</a></li>--}}
-                        {{--<li><a  href="gallery.html">Gallery</a></li>--}}
-                        {{--<li><a  href="todo_list.html">Todo List</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-                {{--<li class="sub-menu">--}}
-                    {{--<a class="active" href="javascript:;" >--}}
-                        {{--<i class="fa fa-book"></i>--}}
-                        {{--<span>Extra Pages</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="sub">--}}
-                        {{--<li class="active"><a  href="blank.html">Blank Page</a></li>--}}
-                        {{--<li><a  href="login.html">Login</a></li>--}}
-                        {{--<li><a  href="lock_screen.html">Lock Screen</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-                {{--<li class="sub-menu">--}}
-                    {{--<a href="javascript:;" >--}}
-                        {{--<i class="fa fa-tasks"></i>--}}
-                        {{--<span>Forms</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="sub">--}}
-                        {{--<li><a  href="form_component.html">Form Components</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-                {{--<li class="sub-menu">--}}
-                    {{--<a href="javascript:;" >--}}
-                        {{--<i class="fa fa-th"></i>--}}
-                        {{--<span>Data Tables</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="sub">--}}
-                        {{--<li><a  href="basic_table.html">Basic Table</a></li>--}}
-                        {{--<li><a  href="responsive_table.html">Responsive Table</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-                {{--<li class="sub-menu">--}}
-                    {{--<a href="javascript:;" >--}}
-                        {{--<i class=" fa fa-bar-chart-o"></i>--}}
-                        {{--<span>Charts</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="sub">--}}
-                        {{--<li><a  href="morris.html">Morris</a></li>--}}
-                        {{--<li><a  href="chartjs.html">Chartjs</a></li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
+
 
             </ul>
             <!-- sidebar menu end-->

@@ -4,7 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class CarUpdateFormTest extends TestCase
+class CarGeneralTest extends TestCase
 {
     /**
      * A basic test example.
@@ -16,11 +16,17 @@ class CarUpdateFormTest extends TestCase
         $this->assertTrue(true);
     }
 
-    /*
-     * Testing the views
+
+    /**
+     * Show Specific car data
+     *
+     * @return void
+     *
      * */
-    public function testUpdateForm(){
-        $this->visit('admin/cars/1/edit')->see('Update New Car');
+
+    public function testShowSpecificData($id = 1){
+        $this->visit('admin/cars/show/'.$id)->see('Details Of the car');
     }
+
 
 }
