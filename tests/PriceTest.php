@@ -4,7 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class CarGeneralTest extends TestCase
+class PriceTest extends TestCase
 {
     /**
      * A basic test example.
@@ -16,17 +16,14 @@ class CarGeneralTest extends TestCase
         $this->assertTrue(true);
     }
 
-
     /**
-     * Show Specific car data
+     * Test to get index listing
      *
-     * @return void
-     *
+     * @return Illuminate\Http\Response
      * */
 
-//    public function testShowSpecificData($id = 1){
-//        $this->visit('admin/cars/show/'.$id)->see('Details Of the car');
-//    }
-
-
+    public function testIndexListing(){
+        $price = PriceModel::all();
+        $this->assertArrayHasKey($price);
+    }
 }

@@ -232,6 +232,14 @@
                     </ul>
                 </li>
 
+                <li class="sub-menu">
+                    <a href="{{ url('admin/price') }}" >
+                        <i class="fa fa-money"></i>
+                        <span>Price</span>
+                    </a>
+
+                </li>
+
 
 
             </ul>

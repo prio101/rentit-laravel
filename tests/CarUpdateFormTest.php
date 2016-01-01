@@ -19,8 +19,8 @@ class CarUpdateFormTest extends TestCase
     /*
      * Testing the views
      * */
-    public function testUpdateForm(){
-        $this->visit('admin/cars/1/edit')->see('Update New Car');
-    }
+//    public function testUpdateForm(){
+//        $this->visit('admin/cars/1/edit')->see('Update New Car');
+//    }
 
 }

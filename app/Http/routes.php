@@ -85,6 +85,9 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
     }) ;
 /*Price List Admin panel*/
 
-    
+    Route::group(['prefix'=>'price' , 'namespace'=>'Price'] , function(){
+//        GET the listing of index data
+        Route::GET('/' ,'priceController@index' );
+    });
 
 });
