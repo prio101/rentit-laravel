@@ -1,2 +1,14 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+.custom-price {
+  .cash-plan {
+    i {
+      color: #F0F0F0;
+      align-content: center;
+    }
 
+  }
+  background-color: #000000 !important;
+}
+.list-price-data{
+  margin-left: 3px;
+}

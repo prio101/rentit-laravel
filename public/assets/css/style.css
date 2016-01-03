@@ -1055,12 +1055,21 @@ PANELS CONFIGURATIONS
 /*Green Panel*/
 .green-panel {
 	text-align: center;
-	background: #68dff0;
+	/*background: #68dff0;*/
 }
+
+.red-panel{
+    background:#e74c3c;
+}
+
 .green-panel .green-header {
 	background: #43b1a9;
 	padding: 3px;
 	margin-bottom: 15px;
+}
+
+.red-panel .red-header{
+    background-color: #e74c3c;
 }
 .green-panel h5 {
 	color: white;
@@ -1073,6 +1082,14 @@ PANELS CONFIGURATIONS
 }
 .green-panel p {
 	color: white;
+}
+
+.green-panel ul {
+    text-align: left;
+    color: #ffffff;
+
+    font-weight: 600;
+    font-size: 1.2em;
 }
 
 /*White Panel */
