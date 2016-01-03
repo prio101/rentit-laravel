@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Model\PriceModel;
 
 class PriceController extends Controller
 {
@@ -16,8 +17,10 @@ class PriceController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.price.index');
+        //Price Model Listing load
+        $prices = PriceModel::all() ;
+        return view('admin.price.index' , ['price' => $prices]);
+
     }
 
     /**
@@ -27,7 +30,8 @@ class PriceController extends Controller
      */
     public function create()
     {
-        //
+        //Return the view
+        return view('admin.price.add.index' );
     }
 
     /**

@@ -13,115 +13,30 @@
 
             <hr>
 
-            <div class="col-md-4 col-sm-4 mb">
-                <div class="green-panel pn red-panel">
-                    <div class="green-header red-header">
-                        <h5>Price Plan 1</h5>
+            @foreach($price as $price)
+                <div class="col-md-4 col-sm-4 mb">
+                    <div class="green-panel pn red-panel">
+                        <div class="green-header red-header">
+                            <h5>{{$price->name}}</h5>
+                        </div>
+                        <div class="cash-plan">
+                            <i class="fa fa-money fa-3x"></i>
+                        </div>
+                        <ul class="list-price-data">
+                            <li>Amount:{{$price->amount}} $</li>
+                            <li>Mileage:{{$price->mileage}} Km</li>
+                            <li>Special Amount:{{$price->special}} %</li>
+                            <li></li>
+                        </ul>
+
+                        <a href="{{url('admin/price/edit/'.$price->id)}}" class="btn  btn-success">Edit</a>
+                        <a href="#" class="btn  btn-warning">Delete</a>
+
                     </div>
-                    <div class="cash-plan">
-                        <i class="fa fa-money fa-3x"></i>
-                    </div>
-                    <ul class="list-price-data">
-                        <li>Amount:</li>
-                        <li>Milage:</li>
-                        <li>Special Amount:</li>
-                        <li></li>
-                    </ul>
 
-                    <a href="#" class="btn  btn-success">Edit</a>
-                    <a href="#" class="btn  btn-warning">Delete</a>
+                </div><! --/col-md-4 -->
+            @endforeach
 
-                </div>
-
-            </div><! --/col-md-4 -->
-
-            <div class="col-md-4 col-sm-4 mb">
-                <div class="green-panel pn red-panel">
-                    <div class="green-header red-header">
-                        <h5>Price Plan 1</h5>
-                    </div>
-                    <div class="cash-plan">
-                        <i class="fa fa-money fa-3x"></i>
-                    </div>
-                    <ul class="list-price-data">
-                        <li>Amount:</li>
-                        <li>Milage:</li>
-                        <li>Special Amount:</li>
-                        <li></li>
-                    </ul>
-
-                    <a href="#" class="btn  btn-success">Edit</a>
-                    <a href="#" class="btn  btn-warning">Delete</a>
-
-                </div>
-
-            </div><! --/col-md-4 -->
-
-            <div class="col-md-4 col-sm-4 mb">
-                <div class="green-panel pn red-panel">
-                    <div class="green-header red-header">
-                        <h5>Price Plan 1</h5>
-                    </div>
-                    <div class="cash-plan">
-                        <i class="fa fa-money fa-3x"></i>
-                    </div>
-                    <ul class="list-price-data">
-                        <li>Amount:</li>
-                        <li>Milage:</li>
-                        <li>Special Amount:</li>
-                        <li></li>
-                    </ul>
-
-                    <a href="#" class="btn  btn-success">Edit</a>
-                    <a href="#" class="btn  btn-warning">Delete</a>
-
-                </div>
-
-            </div><! --/col-md-4 -->
-
-            <div class="col-md-4 col-sm-4 mb">
-                <div class="green-panel pn red-panel">
-                    <div class="green-header red-header">
-                        <h5>Price Plan 1</h5>
-                    </div>
-                    <div class="cash-plan">
-                        <i class="fa fa-money fa-3x"></i>
-                    </div>
-                    <ul class="list-price-data">
-                        <li>Amount:</li>
-                        <li>Milage:</li>
-                        <li>Special Amount:</li>
-                        <li></li>
-                    </ul>
-
-                    <a href="#" class="btn  btn-success">Edit</a>
-                    <a href="#" class="btn  btn-warning">Delete</a>
-
-                </div>
-
-            </div><! --/col-md-4 -->
-
-            <div class="col-md-4 col-sm-4 mb">
-                <div class="green-panel pn red-panel">
-                    <div class="green-header red-header">
-                        <h5>Price Plan 1</h5>
-                    </div>
-                    <div class="cash-plan">
-                        <i class="fa fa-money fa-3x"></i>
-                    </div>
-                    <ul class="list-price-data">
-                        <li>Amount:</li>
-                        <li>Milage:</li>
-                        <li>Special Amount:</li>
-                        <li></li>
-                    </ul>
-
-                    <a href="#" class="btn  btn-success">Edit</a>
-                    <a href="#" class="btn  btn-warning">Delete</a>
-
-                </div>
-
-            </div><! --/col-md-4 -->
 
             
 

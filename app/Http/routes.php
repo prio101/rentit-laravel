@@ -88,6 +88,11 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
     Route::group(['prefix'=>'price' , 'namespace'=>'Price'] , function(){
 //        GET the listing of index data
         Route::GET('/' ,'priceController@index' );
+//        GET the Add page of pricing
+        Route::GET('/add' , 'priceController@create');
+
+//        GET the edit page
+        Route::GET('/edit/{id}' , 'priceController@edit');
     });
 
 });
