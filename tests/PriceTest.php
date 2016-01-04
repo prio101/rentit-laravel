@@ -6,6 +6,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Model\PriceModel ;
 class PriceTest extends TestCase
 {
+    use DatabaseTransactions;
+
     /**
      * A basic test example.
      *
@@ -75,9 +77,20 @@ class PriceTest extends TestCase
             ->assertResponseStatus(200);
     }
 
-    public function testAddPriceForm(){
-        $price = PriceModel::all();
 
-        
+    /**
+     * Test the Add Form Entry
+     *
+     * @return void
+     * */
+    public function testAddPriceForm(){
+
+        $price = factory(PriceModel::class)->create() ;
+
+        $this->visit("admin/price/add")
+            ->press("Save")
+            ->returnArgument($price);
     }
+
+
 }

@@ -90,6 +90,8 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::GET('/' ,'priceController@index' );
 //        GET the Add page of pricing
         Route::GET('/add' , 'priceController@create');
+//        POST the price plan
+        Route::POST('/store' , 'priceController@store') ;
 
 //        GET the edit page
         Route::GET('/edit/{id}' , 'priceController@edit');
