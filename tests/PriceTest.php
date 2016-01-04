@@ -67,7 +67,7 @@ class PriceTest extends TestCase
      * */
 
     public function testEditButtonRoute(){
-       // $allPrice = PriceModel::all()->whereLoose("id");
+
 
         $this->visit('admin/price')
              ->click('Edit')
@@ -75,5 +75,9 @@ class PriceTest extends TestCase
             ->assertResponseStatus(200);
     }
 
+    public function testAddPriceForm(){
+        $price = PriceModel::all();
 
+        
+    }
 }
