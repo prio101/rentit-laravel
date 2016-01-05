@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Model\PriceModel;
+use Illuminate\Support\Facades\Validator;
 
 class PriceController extends Controller
 {
@@ -42,7 +43,16 @@ class PriceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validation
+        $rules = [
+            'name'  => 'required' ,
+            'amount'=> 'required' ,
+            'mileage' => 'required' ,
+            'special_amount' => 'required'
+        ] ;
+
+        
+
     }
 
     /**
