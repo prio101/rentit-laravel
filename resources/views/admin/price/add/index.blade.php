@@ -42,6 +42,36 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    {!! Form::label('Amount'  ,'', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('amount' , null , ['class'=>'form-control' , 'placeholder' =>'Ex: 50$']) !!}
+
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Mileage'  ,'', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('mileage' , null , ['class'=>'form-control' , 'placeholder' =>'EX: 15 KM']) !!}
+
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Special Amount'  ,'', ['class'=>'col-sm-2 control-label']) !!}
+
+                    <div class="col-sm-10">
+                        {!! Form::text('special_amount' , null , ['class'=>'form-control' , 'placeholder' =>'EX: 8% OFF']) !!}
+
+
+                    </div>
+                </div>
+
 
                 <div class="form-group">
 
