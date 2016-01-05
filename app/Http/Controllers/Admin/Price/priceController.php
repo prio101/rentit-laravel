@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Price;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect ;
 
 use App\Http\Requests;
 use App\Http\Requests\CreatePricePanelRequest ;
@@ -67,7 +68,11 @@ class PriceController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Return the view of the price panel
+        $pricePanel = PriceModel::find($id) ;
+
+        return view("admin.price.edit.index" , ['price' => $pricePanel]) ;
+
     }
 
     /**
@@ -77,9 +82,21 @@ class PriceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreatePricePanelRequest $request, $id)
     {
-        //
+        //Edit the price panel
+        $price = PriceModel::find($id) ;
+
+        $price->name    = $request->input('name') ;
+        $price->amount  = $request->input('amount') ;
+        $price->mileage = $request->input('mileage');
+        $price->special = $request->input('special');
+
+
+        $price->save();
+
+
+        return Redirect::to('admin/price');
     }
 
     /**
@@ -90,6 +107,11 @@ class PriceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Delete Button
+        $price = PriceModel::find($id) ;
+
+        $price->delete() ;
+
+        return Redirect::to('admin/price');
     }
 }

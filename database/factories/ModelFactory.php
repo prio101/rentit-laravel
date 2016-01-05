@@ -26,7 +26,7 @@ use Faker\Generator ;
 //    ];
 //});
 
-
+//Price panel factory
 $factory->define(PriceModel::class , function(Generator $faker){
     return [
 
@@ -36,4 +36,7 @@ $factory->define(PriceModel::class , function(Generator $faker){
         'special'   => $faker->numberBetween($min = 10, $max = 20),
 
     ] ;
+
+
 }) ;
+

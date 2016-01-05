@@ -28,7 +28,7 @@ class CreatePricePanelRequest extends Request
             'name'   => 'required | min : 2',
             'amount' => 'required | numeric ' ,
             'mileage'=> 'required | numeric' ,
-            'special_amount' => 'required | numeric'
+            'special' => 'required | numeric'
         ];
     }
 }
