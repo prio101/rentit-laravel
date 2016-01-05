@@ -95,6 +95,12 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 
 //        GET the edit page
         Route::GET('/edit/{id}' , 'priceController@edit');
+
+//        PATCH the edit page data
+        Route::PATCH('/update/{id}' , 'priceController@update') ;
+
+//        DELETE the price panel data
+        Route::DELETE('/delete/{id}' , 'priceController@destroy');
     });
 
 });

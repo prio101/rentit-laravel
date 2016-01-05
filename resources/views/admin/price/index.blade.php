@@ -30,8 +30,9 @@
                         </ul>
 
                         <a href="{{url('admin/price/edit/'.$price->id)}}" class="btn  btn-success">Edit</a>
-                        <a href="#" class="btn  btn-warning">Delete</a>
-
+                        {!! Form::open(['url' => ['admin/price/delete' , $price->id] , 'method' =>'DELETE' ]) !!}
+                            {!! Form::submit('Delete' , ['class' => 'btn  btn-warning']) !!}
+                        {!! Form::close() !!}
                     </div>
 
                 </div><! --/col-md-4 -->

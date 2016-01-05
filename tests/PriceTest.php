@@ -93,4 +93,42 @@ class PriceTest extends TestCase
     }
 
 
+    /**
+     * Test the edit form routes
+     * @param Integer ID
+     * @return Illuminate\Http\Response
+     * */
+    public function testEditPricePanelRoutes(){
+        $price  =  PriceModel::all()->first();
+
+        $this->visit("admin/price/edit/".$price->id)
+            ->see("Edit Price Panel")
+            ->assertResponseStatus(200) ;
+    }
+
+    /**
+     * Test the edit form entry
+     * @return Illuminate\Http\Response
+     * */
+
+    public function testEditPricePanelEntry(){
+        $price = factory(PriceModel::class)->create() ;
+
+        $priceId = PriceModel::all()->first() ;
+
+        $this->visit("admin/price/edit/".$priceId->id)
+            ->press("Edit")
+            ->returnArgument($price);
+
+    }
+
+
+    public function testDeleteButtonPricePanel(){
+        $price = PriceModel::all()->last();
+        $delete = $price->delete() ;
+        $this->visit('admin/price/')
+            ->press('Delete')
+            ->returnArgument($delete) ;
+    }
+
 }
