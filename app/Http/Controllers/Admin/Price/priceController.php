@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Price;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\CreatePricePanelRequest ;
 use App\Http\Controllers\Controller;
 use App\Model\PriceModel;
 
@@ -40,9 +41,11 @@ class PriceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePricePanelRequest $request)
     {
-        //
+        PriceModel::create($request->all());
+
+        return redirect("admin/price") ;
     }
 
     /**
