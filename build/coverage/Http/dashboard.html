@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /usr/share/nginx/html/rentit/app/Http</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">/usr/share/nginx/html/rentit/app</a></li>
+        <li><a href="index.html">Http</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/Auth/PasswordController.php.html#8">PasswordController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#8">Authenticate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#8">RedirectIfAuthenticated</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/AuthController.php.html#11">AuthController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#10">adminHomeController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#14">carsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#16">bookingsController</a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="Controllers/Admin/Price/priceController.php.html#11">PriceController</a></td><td class="text-right">62%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#14">carsController</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#16">bookingsController</a></td><td class="text-right">37</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#8">Authenticate</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#8">RedirectIfAuthenticated</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controllers/adminHomeController.php.html#60"><abbr title="adminHomeController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#72"><abbr title="adminHomeController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#83"><abbr title="adminHomeController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#49"><abbr title="adminHomeController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#38"><abbr title="adminHomeController::store">store</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#17"><abbr title="adminHomeController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/adminHomeController.php.html#27"><abbr title="adminHomeController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/AuthController.php.html#31"><abbr title="AuthController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/AuthController.php.html#42"><abbr title="AuthController::validator">validator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#23"><abbr title="RedirectIfAuthenticated::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#35"><abbr title="RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#35"><abbr title="Authenticate::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#23"><abbr title="Authenticate::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/AuthController.php.html#57"><abbr title="AuthController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/PasswordController.php.html#28"><abbr title="PasswordController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Price/priceController.php.html#88"><abbr title="PriceController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Price/priceController.php.html#77"><abbr title="PriceController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#21"><abbr title="carsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#32"><abbr title="carsController::onGarage">onGarage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#43"><abbr title="carsController::onService">onService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#204"><abbr title="bookingsController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#175"><abbr title="bookingsController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#143"><abbr title="bookingsController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#154"><abbr title="bookingsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#55"><abbr title="carsController::onRepair">onRepair</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#66"><abbr title="carsController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#198"><abbr title="carsController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Price/priceController.php.html#54"><abbr title="PriceController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#186"><abbr title="carsController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#170"><abbr title="carsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#78"><abbr title="carsController::store">store</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#155"><abbr title="carsController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#81"><abbr title="bookingsController::store">store</abbr></a></td><td class="text-right">47%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Middleware/Authenticate.php.html#35"><abbr title="Authenticate::handle">handle</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#35"><abbr title="RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/Admin/Cars/carsController.php.html#78"><abbr title="carsController::store">store</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/Admin/Bookings/bookingsController.php.html#81"><abbr title="bookingsController::store">store</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.4</a> using <a href="http://php.net/" target="_top">PHP 5.5.9-1ubuntu4.14</a> and <a href="https://phpunit.de/">PHPUnit 4.8.21</a> at Tue Jan 5 13:53:06 UTC 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([6,0,0,0,0,1,0,1,0,0,0,5], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([32,0,0,0,0,1,0,0,0,0,0,9], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[40,11,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#16\">bookingsController<\/a>"],[0,11,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#14\">carsController<\/a>"],[62.5,7,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#11\">PriceController<\/a>"],[0,7,"<a href=\"Controllers\/adminHomeController.php.html#10\">adminHomeController<\/a>"],[0,3,"<a href=\"Controllers\/Auth\/AuthController.php.html#11\">AuthController<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/PasswordController.php.html#8\">PasswordController<\/a>"],[100,0,"<a href=\"Controllers\/Controller.php.html#10\">Controller<\/a>"],[100,0,"<a href=\"Kernel.php.html#7\">Kernel<\/a>"],[0,4,"<a href=\"Middleware\/Authenticate.php.html#8\">Authenticate<\/a>"],[100,0,"<a href=\"Middleware\/EncryptCookies.php.html#7\">EncryptCookies<\/a>"],[0,3,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#8\">RedirectIfAuthenticated<\/a>"],[100,0,"<a href=\"Middleware\/VerifyCsrfToken.php.html#7\">VerifyCsrfToken<\/a>"],[100,0,"<a href=\"Requests\/Request.php.html#7\">Request<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#23\">bookingsController::index<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#37\">bookingsController::completedList<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#47\">bookingsController::ongoingList<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#57\">bookingsController::upcomingList<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#68\">bookingsController::create<\/a>"],[47.826086956522,2,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#81\">bookingsController::store<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#143\">bookingsController::show<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#154\">bookingsController::edit<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#175\">bookingsController::update<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Bookings\/bookingsController.php.html#204\">bookingsController::destroy<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#21\">carsController::index<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#32\">carsController::onGarage<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#43\">carsController::onService<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#55\">carsController::onRepair<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#66\">carsController::create<\/a>"],[0,2,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#78\">carsController::store<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#155\">carsController::show<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#170\">carsController::edit<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#186\">carsController::update<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Cars\/carsController.php.html#198\">carsController::destroy<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#18\">PriceController::index<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#31\">PriceController::create<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#43\">PriceController::store<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#54\">PriceController::show<\/a>"],[100,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#65\">PriceController::edit<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#77\">PriceController::update<\/a>"],[0,1,"<a href=\"Controllers\/Admin\/Price\/priceController.php.html#88\">PriceController::destroy<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#17\">adminHomeController::index<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#27\">adminHomeController::create<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#38\">adminHomeController::store<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#49\">adminHomeController::show<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#60\">adminHomeController::edit<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#72\">adminHomeController::update<\/a>"],[0,1,"<a href=\"Controllers\/adminHomeController.php.html#83\">adminHomeController::destroy<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/AuthController.php.html#31\">AuthController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/AuthController.php.html#42\">AuthController::validator<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/AuthController.php.html#57\">AuthController::create<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/PasswordController.php.html#28\">PasswordController::__construct<\/a>"],[0,1,"<a href=\"Middleware\/Authenticate.php.html#23\">Authenticate::__construct<\/a>"],[0,3,"<a href=\"Middleware\/Authenticate.php.html#35\">Authenticate::handle<\/a>"],[0,1,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#23\">RedirectIfAuthenticated::__construct<\/a>"],[0,2,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#35\">RedirectIfAuthenticated::handle<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="17" assertions="40" failures="0" errors="0" time="49.679440">
+    <testsuite name="AdminInterfaceCheckerTest" file="/usr/share/nginx/html/rentit/tests/AdminInterfaceCheckerTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.597772">
+      <testcase name="testRouteForAdminInterface" class="AdminInterfaceCheckerTest" file="/usr/share/nginx/html/rentit/tests/AdminInterfaceCheckerTest.php" line="14" assertions="2" time="0.597772"/>
+    </testsuite>
+    <testsuite name="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" tests="7" assertions="16" failures="0" errors="0" time="42.880711">
+      <testcase name="testBookingPanelReturnRoute" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="15" assertions="2" time="11.001189"/>
+      <testcase name="testBookingPanelStatusCode" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="26" assertions="2" time="10.886185"/>
+      <testcase name="testBookingCompleted" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="34" assertions="3" time="2.491619"/>
+      <testcase name="testBookingUpcoming" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="42" assertions="2" time="2.558022"/>
+      <testcase name="testBookingOngoing" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="50" assertions="2" time="2.709538"/>
+      <testcase name="testBookingsAddPanel" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="60" assertions="2" time="0.570537"/>
+      <testcase name="testBookingsAddForm" class="BookingsPanelTest" file="/usr/share/nginx/html/rentit/tests/BookingsPanelTest.php" line="78" assertions="3" time="12.663621"/>
+    </testsuite>
+    <testsuite name="CarGeneralTest" file="/usr/share/nginx/html/rentit/tests/CarGeneralTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.362262">
+      <testcase name="testExample" class="CarGeneralTest" file="/usr/share/nginx/html/rentit/tests/CarGeneralTest.php" line="14" assertions="1" time="0.362262"/>
+    </testsuite>
+    <testsuite name="CarUpdateFormTest" file="/usr/share/nginx/html/rentit/tests/CarUpdateFormTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.359571">
+      <testcase name="testExample" class="CarUpdateFormTest" file="/usr/share/nginx/html/rentit/tests/CarUpdateFormTest.php" line="14" assertions="1" time="0.359571"/>
+    </testsuite>
+    <testsuite name="RootRouteCheckerTest" file="/usr/share/nginx/html/rentit/tests/ExampleTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.476995">
+      <testcase name="testRoot" class="RootRouteCheckerTest" file="/usr/share/nginx/html/rentit/tests/ExampleTest.php" line="14" assertions="2" time="0.476995"/>
+    </testsuite>
+    <testsuite name="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" tests="6" assertions="18" failures="0" errors="0" time="5.002129">
+      <testcase name="testExample" class="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" line="16" assertions="1" time="0.373093"/>
+      <testcase name="testIndexStatus" class="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" line="27" assertions="3" time="0.830507"/>
+      <testcase name="testIndexData" class="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" line="39" assertions="2" time="0.851224"/>
+      <testcase name="testAddNewButtonRoute" class="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" line="57" assertions="5" time="1.061218"/>
+      <testcase name="testEditButtonRoute" class="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" line="71" assertions="5" time="0.962314"/>
+      <testcase name="testAddPriceForm" class="PriceTest" file="/usr/share/nginx/html/rentit/tests/PriceTest.php" line="86" assertions="2" time="0.923773"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
