@@ -108,6 +108,14 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 //        GET the listing of index theme
     Route::GET('/' , 'themeController@index');
     });
+/*Admin Profile Edit*/
+    Route::group(['prefix' => 'profile' , 'namespace' => 'Profile'] , function(){
+//        GET the admin index
+        Route::GET('/' , 'profileController@index');
+
+//        UPDATE the admin profile
+        Route::PATCH('/update' , 'profileController@update');
+    }) ;
 
 
 

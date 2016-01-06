@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Cars;
 
 use App\Model\CarsModel;
+use App\Model\AdminProfile;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -21,7 +22,8 @@ class carsController extends Controller
     public function index()
     {
         $cars =  CarsModel::all();
-        return view("admin.cars.index" , ['cars' => $cars]) ;
+        $admin = AdminProfile::all()->last() ;
+        return view("admin.cars.index" , ['cars' => $cars , 'admin' => $admin]) ;
     }
 
     /**
@@ -31,8 +33,8 @@ class carsController extends Controller
      * */
     public function onGarage(){
         $cars = CarsModel::all()->whereLoose('status' , 1);
-
-        return view('admin.cars.on-garage' , ['cars' => $cars]) ;
+        $admin = AdminProfile::all()->last() ;
+        return view('admin.cars.on-garage' , ['cars' => $cars, 'admin' => $admin]) ;
     }
 
     /**
@@ -42,8 +44,8 @@ class carsController extends Controller
      * */
     public function onService(){
         $cars = CarsModel::all()->whereLoose('status' , 2) ;
-
-        return view('admin.cars.on-service' , ['cars' => $cars]);
+        $admin = AdminProfile::all()->last() ;
+        return view('admin.cars.on-service' , ['cars' => $cars, 'admin' => $admin]);
     }
 
     /**
@@ -54,8 +56,8 @@ class carsController extends Controller
 
     public function onRepair(){
         $cars = CarsModel::all()->whereLoose('status' , 3);
-
-        return view('admin.cars.on-repair' , ['cars'=> $cars]);
+        $admin = AdminProfile::all()->last() ;
+        return view('admin.cars.on-repair' , ['cars'=> $cars, 'admin' => $admin]);
     }
 
     /**
@@ -66,7 +68,8 @@ class carsController extends Controller
     public function create()
     {
         //Create car page
-        return view('admin.cars.create.index');
+        $admin = AdminProfile::all()->last() ;
+        return view('admin.cars.create.index',['admin' => $admin]);
     }
 
     /**
@@ -156,8 +159,9 @@ class carsController extends Controller
     {
         //Show a specific car data
         $cars = CarsModel::find($id) ;
+        $admin = AdminProfile::all()->last();
 
-        return view('admin.cars.show.index' , ['cars' => $cars]);
+        return view('admin.cars.show.index' , ['cars' => $cars , 'admin' =>$admin]);
 
     }
 
@@ -171,9 +175,9 @@ class carsController extends Controller
     {
         //Edit data of the cars
         $cars = CarsModel::findOrFail($id) ;
+        $admin = AdminProfile::all()->last();
 
-
-        return view('admin.cars.edit.index' , ['cars' =>$cars]) ;
+        return view('admin.cars.edit.index' , ['cars' =>$cars , 'admin' => $admin]) ;
     }
 
     /**

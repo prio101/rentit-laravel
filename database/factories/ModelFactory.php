@@ -2,6 +2,7 @@
 
 use App\Model ;
 use App\Model\PriceModel;
+use App\Model\AdminProfile ;
 
 use Faker\Generator ;
 /*
@@ -38,5 +39,13 @@ $factory->define(PriceModel::class , function(Generator $faker){
     ] ;
 
 
+}) ;
+
+// Admin Profile factory
+$factory->define(AdminProfile::class , function(Generator $faker){
+    return [
+        'name' => $faker->name ,
+        'image' => $faker->numberBetween($min=1 , $max = 10).'.png'
+    ];
 }) ;
 

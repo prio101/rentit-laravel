@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Model\BookingsModel;
+use App\Model\AdminProfile;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -23,9 +24,9 @@ class bookingsController extends Controller
     public function index()
     {
        $bookings = BookingsModel::all() ;
+       $admin = AdminProfile::all()->last();
 
-
-       return view('admin.bookings.index' , ['bookings' => $bookings] ) ;
+       return view('admin.bookings.index' , ['bookings' => $bookings , 'admin' =>$admin] ) ;
        //return $bookings->toJson();
 
     }
@@ -36,8 +37,9 @@ class bookingsController extends Controller
     * */
     public function completedList(){
         $bookingsCompleted = BookingsModel::all()->where('status','1');
+        $admin = AdminProfile::all()->last();
 
-        return view('admin.bookings.completedIndex',['bookingsCompleted'=>$bookingsCompleted]) ;
+        return view('admin.bookings.completedIndex',['bookingsCompleted'=>$bookingsCompleted, 'admin' =>$admin]) ;
     }
 
     /*
@@ -46,8 +48,9 @@ class bookingsController extends Controller
      * */
     public function ongoingList(){
         $bookingsOngoing = BookingsModel::all()->where('status','2');
+        $admin = AdminProfile::all()->last();
 
-        return view('admin.bookings.ongoingIndex',['bookingsOngoing'=>$bookingsOngoing]);
+        return view('admin.bookings.ongoingIndex',['bookingsOngoing'=>$bookingsOngoing, 'admin' =>$admin]);
     }
 
     /*
@@ -56,8 +59,9 @@ class bookingsController extends Controller
      * */
     public function upcomingList(){
         $bookingsUpcoming = BookingsModel::all()->where('status','3');
+        $admin = AdminProfile::all()->last();
 
-        return view('admin.bookings.upcomingIndex',['bookingsUpcoming'=>$bookingsUpcoming]) ;
+        return view('admin.bookings.upcomingIndex',['bookingsUpcoming'=>$bookingsUpcoming, 'admin' =>$admin]) ;
     }
 
     /**
@@ -157,11 +161,12 @@ class bookingsController extends Controller
 
         //Loading model by ID
         $bookings = BookingsModel::find($id) ;
+        $admin = AdminProfile::all()->last();
 
 
 
         //Showing the specified data
-        return view('admin.bookings.update.index')->with('bookings' , $bookings);
+        return view('admin.bookings.update.index')->with('bookings' , $bookings, 'admin' ,$admin);
 
     }
 

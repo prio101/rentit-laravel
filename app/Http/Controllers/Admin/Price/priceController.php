@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Requests\CreatePricePanelRequest ;
 use App\Http\Controllers\Controller;
 use App\Model\PriceModel;
+use App\Model\AdminProfile;
 use Illuminate\Support\Facades\Validator;
 
 class PriceController extends Controller
@@ -22,7 +23,8 @@ class PriceController extends Controller
     {
         //Price Model Listing load
         $prices = PriceModel::all() ;
-        return view('admin.price.index' , ['price' => $prices]);
+        $admin = AdminProfile::all()->last();
+        return view('admin.price.index' , ['price' => $prices , 'admin' =>$admin]);
 
     }
 
@@ -84,8 +86,9 @@ class PriceController extends Controller
     {
         // Return the view of the price panel
         $pricePanel = PriceModel::find($id) ;
+        $admin = AdminProfile::all()->last();
 
-        return view("admin.price.edit.index" , ['price' => $pricePanel]) ;
+        return view("admin.price.edit.index" , ['price' => $pricePanel , 'admin' =>$admin]) ;
 
     }
 

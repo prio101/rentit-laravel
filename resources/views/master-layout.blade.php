@@ -197,8 +197,8 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="{{ url('admin/profile') }}"><img src="{{ asset('assets/img/ui-zac.jpg') }}" class="img-circle" width="60"></a></p>
-                <h5 class="centered">Marcel Newman</h5>
+                <p class="centered"><a href="{{ url('admin/profile') }}"><img src="{{ asset('assets/img/adminprofile/'.$admin->image) }}" class="img-circle" width="60"></a></p>
+                <h5 class="centered">{{$admin->name}}</h5>
 
                 <li class="mt">
                     <a href="{{ url('/admin') }}">

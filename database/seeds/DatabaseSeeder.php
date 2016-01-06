@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
         $this->call(BookingsTableSeeder::class) ;
         $this->call(PriceTableSeeder::class);
+        $this->call(AdminProfileSeeder::class);
 
 
 //        factory(BookingsModel::class )->create();
