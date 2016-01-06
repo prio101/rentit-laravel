@@ -120,3 +120,6 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 
 
 });
+
+
+// User Profile Page
