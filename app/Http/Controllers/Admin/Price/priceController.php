@@ -45,7 +45,7 @@ class PriceController extends Controller
      */
     public function store(CreatePricePanelRequest $request)
     {
-<<<<<<< HEAD
+
         //Validation
         $rules = [
             'name'  => 'required' ,
@@ -56,11 +56,11 @@ class PriceController extends Controller
 
         
 
-=======
+
         PriceModel::create($request->all());
 
         return redirect("admin/price") ;
->>>>>>> priceModule
+
     }
 
     /**
