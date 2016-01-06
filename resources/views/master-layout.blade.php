@@ -197,7 +197,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="#profile"><img src="{{ asset('assets/img/ui-zac.jpg') }}" class="img-circle" width="60"></a></p>
+                <p class="centered"><a href="{{ url('admin/profile') }}"><img src="{{ asset('assets/img/ui-zac.jpg') }}" class="img-circle" width="60"></a></p>
                 <h5 class="centered">Marcel Newman</h5>
 
                 <li class="mt">
@@ -240,6 +240,14 @@
                     </a>
 
                 </li>
+
+                {{--<li class="sub-menu">--}}
+                    {{--<a href="{{ url('admin/theme') }}" >--}}
+                        {{--<i class="fa fa-picture-o"></i>--}}
+                        {{--<span>Theme</span>--}}
+                    {{--</a>--}}
+
+                {{--</li>--}}
 
 
 

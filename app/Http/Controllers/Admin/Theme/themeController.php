@@ -17,7 +17,7 @@ class themeController extends Controller
     public function index()
     {
         //Return the data
-        return "Theme List" ;
+        return view('admin.theme.index') ;
     }
 
     /**
