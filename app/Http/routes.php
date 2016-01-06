@@ -103,4 +103,10 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
         Route::DELETE('/delete/{id}' , 'priceController@destroy');
     });
 
+/*Theme Module Admin Panel*/
+    Route::group(['prefix' => 'theme' , 'namespace' => 'Theme'] , function(){
+//        GET the listing of index theme
+    Route::GET('/' , 'themeController@index');
+    });
+
 });
