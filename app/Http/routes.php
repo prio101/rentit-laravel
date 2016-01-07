@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function(){
- return view('welcome') ;
+Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
+//    GET the route of the front site
+    Route::GET('/' , '') ;
 });
+
 
 
 
@@ -122,4 +124,4 @@ Route::group(['prefix'=>'admin' , 'namespace' =>'Admin'] , function(){
 });
 
 
-// User Profile Page
+
