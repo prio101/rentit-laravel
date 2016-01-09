@@ -17,6 +17,23 @@ Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
 });
 
 
+/*------------------------------------------------
+ * ***********************************************
+ * Auth Panel
+ * -----------------------------------------------
+ * ***********************************************
+ * */
+ Route::group(['prefix' => 'auth' , 'namespace' => 'Auth'] , function(){
+     // Authentication routes...
+     Route::get('login', 'AuthController@getLogin');
+     Route::post('login', 'AuthController@postLogin');
+     Route::get('logout', 'AuthController@getLogout');
+
+// Registration routes...
+     Route::get('register', 'AuthController@getRegister');
+     Route::post('register', 'AuthController@postRegister');
+ }) ;
+
 
 
 /* ------------------------------------------------
