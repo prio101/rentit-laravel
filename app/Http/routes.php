@@ -13,7 +13,7 @@
 
 Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
 //    GET the route of the front site
-    Route::GET('/' , '') ;
+    Route::GET('/' , 'siteController@index') ;
 });
 
 

@@ -35,8 +35,9 @@ class PriceController extends Controller
      */
     public function create()
     {
+        $admin = AdminProfile::all()->last();
         //Return the view
-        return view('admin.price.add.index' );
+        return view('admin.price.add.index' , ['admin'=>$admin] );
     }
 
     /**

@@ -14,6 +14,6 @@ class RootRouteCheckerTest extends TestCase
     public function testRoot()
     {
         $this->visit('/')
-             ->see('RentIt System') ;
+             ->see('') ;
     }
 }

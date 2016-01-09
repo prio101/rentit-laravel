@@ -71,7 +71,8 @@ class bookingsController extends Controller
      */
     public function create()
     {
-       return view('admin.bookings.add.index');
+        $admin = AdminProfile::all()->last();
+       return view('admin.bookings.add.index',['admin'=>$admin]);
     }
 
 

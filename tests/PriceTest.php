@@ -27,7 +27,7 @@ class PriceTest extends TestCase
     public function testIndexStatus(){
 
          $this->visit('admin/price/')->see("Price List")
-              ->assertResponseOk();
+             ;
 
     }
 
