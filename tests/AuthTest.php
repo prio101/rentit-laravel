@@ -22,4 +22,12 @@ class AuthTest extends TestCase
     public function testLoginRoute(){
         $this->visit('auth/login')->assertResponseStatus(200) ;
     }
+
+    /*
+     * Test the Register Route
+     *
+     * */
+    public function testRegisterRoute(){
+        $this->visit('auth/register')->assertResponseStatus(200) ;
+    }
 }
