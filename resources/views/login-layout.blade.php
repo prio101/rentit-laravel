@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>Rent It </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet">

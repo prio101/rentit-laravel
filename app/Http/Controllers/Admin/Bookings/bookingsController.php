@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 use App\Model\BookingsModel;
 use App\Model\AdminProfile;
 use Illuminate\Support\Facades\Input;
@@ -23,11 +24,11 @@ class bookingsController extends Controller
      */
     public function index()
     {
+
        $bookings = BookingsModel::all() ;
        $admin = AdminProfile::all()->last();
 
-       return view('admin.bookings.index' , ['bookings' => $bookings , 'admin' =>$admin] ) ;
-       //return $bookings->toJson();
+           return view('admin.bookings.index', ['bookings' => $bookings, 'admin' => $admin]);
 
     }
 
