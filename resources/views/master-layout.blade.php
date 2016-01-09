@@ -293,7 +293,7 @@
 <script src="{{ asset('assets/js/app.js') }}"></script>
 
 <script src="{{ asset('assets/js/chart-master/Chart.js') }}"></script>
-<script src="{{ asset('assets/js/chartjs-conf.js') }}"></script>
+{{--<script src="{{ asset('assets/js/chartjs-conf.js') }}"></script>--}}
 <!--script for this page-->
 <script src="{{ asset('assets/js/morris-conf.js') }}"></script>
 

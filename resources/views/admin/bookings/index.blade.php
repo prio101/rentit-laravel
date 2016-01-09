@@ -3,6 +3,8 @@
 
 
 @section('content')
+
+
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper site-min-height">
@@ -12,34 +14,7 @@
             <span><a href="{{url('admin/bookings/add')}}" class="btn btn-primary btn-theme btn-lg" data-toggle="tooltip" title="Add New"><i class="fa fa-plus "></i>&nbsp; Add New</a></span>
         </div>
 
-        <div class="tab-pane" id="chartjs">
 
-            <div class="row mt">
-                <div class="col-lg-6">
-                    <div class="content-panel">
-                        <h4><i class="fa fa-angle-right"></i> Comparison Bookings</h4>
-                        <small>&nbsp; Comparison of Completed , Ongoing and Upcoming Bookings</small>
-                        <div class="panel-body text-center">
-                            <canvas id="doughnut" height="300" width="400"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="content-panel">
-                        <h4><i class="fa fa-angle-right"></i> Ratio of Getting Booked</h4>
-                        &nbsp; <small>Comparison of Bookings by year</small>
-                        <div class="panel-body text-center">
-                            <canvas id="line" height="300" width="400"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </div>
 
 
 
