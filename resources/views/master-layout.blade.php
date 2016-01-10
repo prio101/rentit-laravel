@@ -249,6 +249,24 @@
 
                 {{--</li>--}}
 
+                <li class="sub-menu">
+                    <a href="javascript:;" >
+                        <i class="fa fa-info"></i>
+                        <span>Extra</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{url('admin/extra/about')}}">About</a></li>
+                        <li><a href="{{url('admin/extra/contact')}}">Contact</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="{{url('admin/todo')}}" >
+                        <i class="fa fa-th-list"></i>
+                        <span>To Do</span>
+                    </a>
+
+                </li>
 
 
             </ul>

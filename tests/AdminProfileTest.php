@@ -4,6 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Model\AdminProfile ;
+use App\User;
 
 class AdminProfileTest extends TestCase
 {
@@ -14,7 +15,9 @@ class AdminProfileTest extends TestCase
     * */
 
     public function testAdminProfileRoute(){
-        $this->visit('admin/profile')->see("Admin Profile")->assertResponseStatus(200);
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user)->withSession(['foo'=>'bar'])->visit('admin/profile')->see("Admin Profile")->assertResponseStatus(200);
     }
 
     /**

@@ -3,6 +3,7 @@
 use App\Model ;
 use App\Model\PriceModel;
 use App\Model\AdminProfile ;
+use App\Model\ExtraModel;
 
 use Faker\Generator ;
 /*
@@ -17,15 +18,15 @@ use Faker\Generator ;
 */
 
 
-
-//$factory->define(App\User::class, function (Faker\Generator $faker) {
-//    return [
-//        'name' => $faker->name,
-//        'email' => $faker->email,
-//        'password' => bcrypt(str_random(10)),
-//        'remember_token' => str_random(10),
-//    ];
-//});
+//User factory
+$factory->define(App\User::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->email,
+        'password' => bcrypt(str_random(10)),
+        'remember_token' => str_random(10),
+    ];
+});
 
 //Price panel factory
 $factory->define(PriceModel::class , function(Generator $faker){
@@ -48,4 +49,12 @@ $factory->define(AdminProfile::class , function(Generator $faker){
         'image' => $faker->numberBetween($min=1 , $max = 10).'.png'
     ];
 }) ;
+
+//Extra table seeder
+$factory->define(ExtraModel::class , function(Generator $faker){
+    return [
+        'about'     => $faker->text ,
+        'contact'   => $faker->address
+    ] ;
+});
 

@@ -1,3 +1,14 @@
-.cash-plan i {
+.custom-price {
+  background-color: #000000 !important;
+}
+
+.custom-price .cash-plan i {
   color: #F0F0F0;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.list-price-data {
+  margin-left: 3px;
 }

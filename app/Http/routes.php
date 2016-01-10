@@ -136,6 +136,26 @@ Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
             Route::PATCH('/update', 'profileController@update');
         });
 
+        /*Extra Page Information Module*/
+        Route::group(['prefix' => 'extra' , 'namespace' => 'Extra'] , function(){
+//            GET the index extra
+            Route::GET('/about' , 'extraController@aboutIndex');
+//            GET the index contact
+            Route::GET('/contact' , 'extraController@contactIndex');
+//            Patch the index extra about
+            Route::PATCH('/about/update' , 'extraController@aboutUpdate');
+//            Patch the index extra contact
+            Route::PATCH('/contact/update' , 'extraController@contactUpdate');
+        });
+
+        /*To Do List Module*/
+        Route::group(['prefix' => 'todo' , 'namespace' => 'Todo'] , function(){
+//                GET the index
+            Route::GET('/' , function(){
+                return 'hi' ;
+            }) ;
+        });
+
 
     });
 

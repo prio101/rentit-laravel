@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\User;
 
 class BookingsPanelTest extends TestCase
 {
@@ -14,7 +15,11 @@ class BookingsPanelTest extends TestCase
      */
     public function testBookingPanelReturnRoute()
     {
-        $this->visit('admin/bookings')
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user)
+            ->withSession(['foo' => 'bar'])
+            ->visit('admin/bookings')
              ->see('Bookings');
 
     }
@@ -32,24 +37,38 @@ class BookingsPanelTest extends TestCase
      * Test of booking completed list
      * */
     public function testBookingCompleted(){
-        $this->visit('admin/bookings/completed')
-             ->see('Completed')->seeStatusCode(200);
+
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user)
+            ->withSession(['foo' => 'bar'])
+            ->visit('admin/bookings/completed')
+            ->see('Completed')->seeStatusCode(200);
     }
 
     /*
      * Test of the booking upcoming list
      * */
     public function testBookingUpcoming(){
-        $this->visit('admin/bookings/upcoming')
-             ->see('Upcoming');
+
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user)
+            ->withSession(['foo'=>'bar'])
+            ->visit('admin/bookings/upcoming')
+            ->see('Upcoming');
     }
 
     /*
      * Test the booking ongoing list
      * */
     public function testBookingOngoing(){
-        $this->visit('admin/bookings/ongoing')
-             ->see('Ongoing');
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user)
+            ->withSession(['foo'=>'bar'])
+            ->visit('admin/bookings/ongoing')
+            ->see('Ongoing');
     }
 
     /*
@@ -62,26 +81,7 @@ class BookingsPanelTest extends TestCase
              ->seeStatusCode(200);
     }
 
-    /*
-     * Test the rows inside the booking index panel
-     * JsonApi
-     * @return void
-     * */
-//    public function testBookingIndexJson(){
-//        $this->get('admin/bookings')->seeJson() ;
-//    }
 
-    /*
-     * Test The Add Form data
-     * @return void
-     * */
-    public function testBookingsAddForm(){
-        $this->visit('admin/bookings/add')
-             ->type('client id' , 'client-id')
-             ->type('car-id' , 'car-id')
-             ->press('Save')
-             ->post('admin/bookings/add') ;
-    }
 
 
     

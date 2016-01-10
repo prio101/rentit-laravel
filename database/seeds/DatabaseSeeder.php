@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        //$this->call(UserTableSeeder::class);
         $this->call(BookingsTableSeeder::class) ;
         $this->call(PriceTableSeeder::class);
         $this->call(AdminProfileSeeder::class);
-
+        $this->call(ExtraTableSeeder::class);
 
 //        factory(BookingsModel::class )->create();
 

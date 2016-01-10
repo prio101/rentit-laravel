@@ -4,6 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Model\PriceModel ;
+use App\User;
 class PriceTest extends TestCase
 {
     use DatabaseTransactions;
@@ -26,7 +27,9 @@ class PriceTest extends TestCase
 
     public function testIndexStatus(){
 
-         $this->visit('admin/price/')->see("Price List")
+         $user = factory(User::class)->create();
+
+        $this->actingAs($user)->withSession(['foo' => 'bar'])->visit('admin/price/')->see("Price List")
              ;
 
     }
@@ -55,7 +58,8 @@ class PriceTest extends TestCase
      * */
 
     public function testAddNewButtonRoute(){
-        $this->visit('admin/price')
+        $user   = factory(User::class)->create();
+        $this->actingAs($user)->withSession(['sarbik'=>'sarbik'])->visit('admin/price')
              ->click("Add New")
              ->seePageIs("admin/price/add")
              ->assertResponseStatus(200) ;
@@ -69,11 +73,11 @@ class PriceTest extends TestCase
      * */
 
     public function testEditButtonRoute(){
+        $user   = factory(User::class)->create();
 
-
-        $this->visit('admin/price')
+        $this->actingAs($user)->withSession(['sarbik'=>'sarbik'])->visit('admin/price')
              ->click('Edit')
-            ->seePageIs('admin/price/edit/1')
+            ->seePageIs('admin/price/edit/5')
             ->assertResponseStatus(200);
     }
 
@@ -86,8 +90,8 @@ class PriceTest extends TestCase
     public function testAddPriceForm(){
 
         $price = factory(PriceModel::class)->create() ;
-
-        $this->visit("admin/price/add")
+        $user   = factory(User::class)->create();
+        $this->actingAs($user)->withSession(['sarbik'=>'sarbik'])->visit("admin/price/add")
             ->press("Save")
             ->returnArgument($price);
     }
@@ -100,10 +104,14 @@ class PriceTest extends TestCase
      * */
     public function testEditPricePanelRoutes(){
         $price  =  PriceModel::all()->first();
+        $user   =  factory(User::class)->create();
 
-        $this->visit("admin/price/edit/".$price->id)
+        $this->actingAs($user)
+            ->withSession(['foo' => 'bar'])
+            ->visit("admin/price/edit/".$price->id)
             ->see("Edit Price Panel")
-            ->assertResponseStatus(200) ;
+            ->assertResponseStatus(200)
+        ;
     }
 
     /**
@@ -115,8 +123,9 @@ class PriceTest extends TestCase
         $price = factory(PriceModel::class)->create() ;
 
         $priceId = PriceModel::all()->first() ;
+        $user   = factory(User::class)->create();
 
-        $this->visit("admin/price/edit/".$priceId->id)
+        $this->actingAs($user)->withSession(['sarbik'=>'sarbik'])->visit("admin/price/edit/".$priceId->id)
             ->press("Edit")
             ->returnArgument($price);
 
@@ -124,9 +133,10 @@ class PriceTest extends TestCase
 
 
     public function testDeleteButtonPricePanel(){
-        $price = PriceModel::all()->last();
+        $price  = PriceModel::all()->last();
         $delete = $price->delete() ;
-        $this->visit('admin/price/')
+        $user   = factory(User::class)->create();
+        $this->actingAs($user)->withSession(['sarbik'=>'sarbik'])->visit('admin/price/')
             ->press('Delete')
             ->returnArgument($delete) ;
     }
