@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PriceTableSeeder::class);
         $this->call(AdminProfileSeeder::class);
         $this->call(ExtraTableSeeder::class);
+        $this->call(TodolistSeeder::class);
 
 //        factory(BookingsModel::class )->create();
 

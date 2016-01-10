@@ -4,6 +4,7 @@ use App\Model ;
 use App\Model\PriceModel;
 use App\Model\AdminProfile ;
 use App\Model\ExtraModel;
+use App\Model\TodoModel;
 
 use Faker\Generator ;
 /*
@@ -58,3 +59,14 @@ $factory->define(ExtraModel::class , function(Generator $faker){
     ] ;
 });
 
+
+//Todo list table
+
+$factory->define(TodoModel::class , function(Generator $faker){
+    return [
+        'name'      => $faker->name ,
+        'details'   => $faker->text ,
+        'priority'  => $faker->numberBetween(1,3)
+
+    ] ;
+});

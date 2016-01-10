@@ -151,9 +151,16 @@ Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
         /*To Do List Module*/
         Route::group(['prefix' => 'todo' , 'namespace' => 'Todo'] , function(){
 //                GET the index
-            Route::GET('/' , function(){
-                return 'hi' ;
-            }) ;
+            Route::GET('/' , 'todoController@index') ;
+
+//            GET the add new
+            Route::GET('/add' , 'todoController@create');
+
+//            POST the add
+            Route::POST('/store/{id}' , 'todoController@store');
+
+//            DELETE the todo
+            Route::DELETE('delete/{id}' , 'todoController@destroy');
         });
 
 
