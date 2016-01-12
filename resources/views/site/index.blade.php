@@ -8,24 +8,24 @@
     <meta name="description" content="A free HTML template and UI Kit built on Bootstrap" />
     <meta name="keywords" content="free html template, bootstrap, ui kit, sass" />
     <meta name="author" content="Peter Finlan and Taty Grassini Codrops" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('assets/img/favicon/apple-touch-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('assets/img/favicon/apple-touch-icon-60x60.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/img/favicon/apple-touch-icon-72x72.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/favicon/apple-touch-icon-76x76.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/img/favicon/apple-touch-icon-114x114.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('assets/img/favicon/apple-touch-icon-120x120.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('assets/img/favicon/apple-touch-icon-144x144.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('assets/img/favicon/apple-touch-icon-152x152.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/img/favicon/apple-touch-icon-180x180.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/favicon-32x32.png')}}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/android-chrome-192x192.png')}}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/favicon-96x96.png')}}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/favicon-16x16.png')}}" sizes="16x16">
+    <link rel="manifest" href="{{asset('assets/img/favicon/manifest.json')}}">
+    <link rel="shortcut icon" href="{{asset('assets/img/favicon/favicon.ico')}}">
     <meta name="msapplication-TileColor" content="#663fb5">
-    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="{{asset('assets/img/favicon/mstile-144x144.png')}}">
+    <meta name="msapplication-config" content="{{asset('assets/img/favicon/browserconfig.xml')}}">
     <meta name="theme-color" content="#663fb5">
     <link rel="stylesheet" href="{{asset('assets/css/landio.css')}}">
 </head>
@@ -76,12 +76,12 @@
                 </li>
                 <li class="nav-item dropdown hidden-sm-down textselect-off">
                     <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="img/face5.jpg" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
+                        <img src="{{asset('assets/img/face5.jpg')}}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
                         <div class="media">
                             <div class="media-left">
-                                <img src="img/face5.jpg" height="60" width="60" alt="Avatar" class="img-circle">
+                                <img src="{{asset('assets/img/face5.jpg')}}" height="60" width="60" alt="Avatar" class="img-circle">
                             </div>
                             <div class="media-body media-middle">
                                 <h5 class="media-heading">Joel Fisher</h5>
@@ -103,7 +103,7 @@
         <div id="collapsingMobileUser" class="collapse navbar-toggleable-custom dropdown-menu-custom p-x-1 hidden-md-up" role="tabpanel" aria-labelledby="collapsingMobileUser">
             <div class="media m-t-1">
                 <div class="media-left">
-                    <img src="img/face5.jpg" height="60" width="60" alt="Avatar" class="img-circle">
+                    <img src="{{asset('assets/img/face5.jpg')}}" height="60" width="60" alt="Avatar" class="img-circle">
                 </div>
                 <div class="media-body media-middle">
                     <h5 class="media-heading">Joel Fisher</h5>
@@ -145,7 +145,7 @@
     <div class="container">
         <h3 class="wp wp-1">Build your beautiful UI, the way you want it, with Land.io</h3>
         <p class="lead wp wp-2">Craft memorable, emotive experiences with our range of beautiful UI elements.</p>
-        <img src="img/mock.png" alt="iPad mock" class="img-fluid wp wp-3">
+        <img src="{{asset('assets/img/mock.png')}}" alt="iPad mock" class="img-fluid wp wp-3">
     </div>
 </section>
 
@@ -194,7 +194,7 @@
 
 <section class="section-video bg-inverse text-xs-center wp wp-4">
     <h3 class="sr-only">Video</h3>
-    <video id="demo_video" class="video-js vjs-default-skin vjs-big-play-centered" controls poster="img/video-poster.jpg" data-setup='{}'>
+    <video id="demo_video" class="video-js vjs-default-skin vjs-big-play-centered" controls poster="{{asset('assets/img/video-poster.jpg')}}" data-setup='{}'>
         <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
         <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
     </video>
@@ -285,46 +285,46 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <blockquote class="blockquote">
-                        <img src="img/face1.jpg" height="80" width="80" alt="Avatar" class="img-circle">
+                        <img src="{{asset('assets/img/face1.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
                         <p class="h3">Good design at the front-end suggests that everything is in order at the back-end, whether or not that is the case.</p>
                         <footer>Dmitry Fadeyev</footer>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote">
-                        <img src="img/face2.jpg" height="80" width="80" alt="Avatar" class="img-circle">
+                        <img src="{{asset('assets/img/face2.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
                         <p class="h3">It’s not about knowing all the gimmicks and photo tricks. If you haven’t got the eye, no program will give it to you.</p>
                         <footer>David Carson</footer>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote">
-                        <img src="img/face3.jpg" height="80" width="80" alt="Avatar" class="img-circle">
+                        <img src="{{asset('assets/img/face3.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
                         <p class="h3">There’s a point when you’re done simplifying. Otherwise, things get really complicated.</p>
                         <footer>Frank Chimero</footer>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote">
-                        <img src="img/face4.jpg" height="80" width="80" alt="Avatar" class="img-circle">
+                        <img src="{{asset('assets/img/face4.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
                         <p class="h3">Designing for clients that don’t appreciate the value of design is like buying new tires for a rental car.</p>
                         <footer>Joel Fisher</footer>
                     </blockquote>
                 </div>
                 <div class="carousel-item">
                     <blockquote class="blockquote">
-                        <img src="img/face5.jpg" height="80" width="80" alt="Avatar" class="img-circle">
+                        <img src="{{asset('assets/img/face5.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
                         <p class="h3">Every picture owes more to other pictures painted before than it owes to nature.</p>
                         <footer>E.H. Gombrich</footer>
                     </blockquote>
                 </div>
             </div>
             <ol class="carousel-indicators">
-                <li class="active"><img src="img/face1.jpg" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="0" class="img-fluid img-circle"></li>
-                <li><img src="img/face2.jpg" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="1" class="img-fluid img-circle"></li>
-                <li><img src="img/face3.jpg" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="2" class="img-fluid img-circle"></li>
-                <li><img src="img/face4.jpg" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="3" class="img-fluid img-circle"></li>
-                <li><img src="img/face5.jpg" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="4" class="img-fluid img-circle"></li>
+                <li class="active"><img src="{{asset('assets/img/face1.jpg')}}" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="0" class="img-fluid img-circle"></li>
+                <li><img src="{{asset('assets/img/face2.jpg')}}" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="1" class="img-fluid img-circle"></li>
+                <li><img src="{{asset('assets/img/face3.jpg')}}" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="2" class="img-fluid img-circle"></li>
+                <li><img src="{{asset('assets/img/face4.jpg')}}" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="3" class="img-fluid img-circle"></li>
+                <li><img src="{{asset('assets/img/face5.jpg')}}" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="4" class="img-fluid img-circle"></li>
             </ol>
         </div>
     </div>
@@ -466,6 +466,6 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/landio.min.js"></script>
+<script src="{{asset('assets/js/landio.min.js')}}"></script>
 </body>
 </html>
