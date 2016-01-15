@@ -76,7 +76,7 @@
                 </li>
                 <li class="nav-item dropdown hidden-sm-down textselect-off">
                     <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="img/face5.jpg" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
+                        <img src="{{asset('assets/img/profile-01.jpg')}}" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
                         <div class="media">
@@ -103,7 +103,7 @@
         <div id="collapsingMobileUser" class="collapse navbar-toggleable-custom dropdown-menu-custom p-x-1 hidden-md-up" role="tabpanel" aria-labelledby="collapsingMobileUser">
             <div class="media m-t-1">
                 <div class="media-left">
-                    <img src="img/face5.jpg" height="60" width="60" alt="Avatar" class="img-circle">
+                    <img src="{{asset('assets/img/profile-01.jpg')}}" height="60" width="60" alt="Avatar" class="img-circle">
                 </div>
                 <div class="media-body media-middle">
                     <h5 class="media-heading">Joel Fisher</h5>

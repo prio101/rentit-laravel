@@ -149,6 +149,9 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
 
+        /*Oauth*/
+        'AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider',
+
 
 
 
@@ -204,6 +207,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 
+        'SocialAuth' => 'AdamWathan\EloquentOAuth\Facades\OAuth',
 
 
     ],

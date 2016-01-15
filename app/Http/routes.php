@@ -166,4 +166,17 @@ Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
 
     });
 
+//OAUTH
+Route::GET('github/authorize' , function(){
+    return SocialAuth::authorize('github');
+});
+
+Route::GET('github/login' , function(){
+    SocialAuth::login('github' , function($user, $userdetails){
+        var_dump($userdetails);
+    } );
+
+    return "DONE " ;
+});
+
 
