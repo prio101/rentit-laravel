@@ -152,6 +152,9 @@ return [
         /*Oauth*/
         'AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider',
 
+        /*Laravel Debugger*/
+        Barryvdh\Debugbar\ServiceProvider::class,
+
 
 
 
@@ -208,6 +211,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
 
         'SocialAuth' => 'AdamWathan\EloquentOAuth\Facades\OAuth',
+
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
 
     ],

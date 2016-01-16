@@ -7,8 +7,9 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "intervention/image": "^2.3",
-        "barryvdh/laravel-debugbar": "^2.1"
+        "intervention/image": "^2.3"
+
+
 
 
     },
@@ -20,7 +21,8 @@
     },
   "require": {
     "laravelcollective/html": "5.1.*",
-      "adamwathan/eloquent-oauth-l5": "^0.4.2"
+    "adamwathan/eloquent-oauth-l5": "^0.4.2",
+    "barryvdh/laravel-debugbar": "^2.1"
   },
     "autoload": {
         "classmap": [
