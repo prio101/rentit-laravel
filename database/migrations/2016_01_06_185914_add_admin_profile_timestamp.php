@@ -25,13 +25,10 @@ class AddAdminProfileTimestamp extends Migration
      */
     public function down()
     {
-        Schema::table('admin_profile_table' , function(Blueprint $table){
-            $table->dropIfExists([
-                'updated_at' ,
-                'created_at'
-            ]);
-        }
+        Schema::dropIfExists('admin_profile_table');
 
-        );
+
+
+
     }
 }

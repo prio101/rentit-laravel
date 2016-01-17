@@ -166,14 +166,49 @@ Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
 
     });
 
-//OAUTH
+
+
+
+//OAUTH Facebook
+//Route::GET('facebook/authorize');
+
+Route::GET('facebook/authorize' , function(){
+    return SocialAuth::authorize('facebook');
+});
+
+
+Route::GET('auth/facebook/login' , function(){
+    SocialAuth::login('facebook' , function($user, $userdetails){
+        var_dump($userdetails);
+    } );
+
+    return "DONE " ;
+});
+
+
 Route::GET('github/authorize' , function(){
     return SocialAuth::authorize('github');
 });
 
+
 Route::GET('github/login' , function(){
     SocialAuth::login('github' , function($user, $userdetails){
         var_dump($userdetails);
+        $user->email = $userdetails->email ;
+        $user->id  = $userdetails->id ;
+        $user->save();
+    } );
+
+    return "DONE " ;
+});
+
+Route::GET('google/authorize' , function(){
+    return SocialAuth::authorize('google');
+});
+
+Route::GET('google/login' , function(){
+    SocialAuth::login('google' , function($user, $userdetails){
+        dd($userdetails);
     } );
 
     return "DONE " ;

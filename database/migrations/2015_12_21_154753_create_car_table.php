@@ -37,6 +37,6 @@ class CreateCarTable extends Migration
     public function down()
     {
         //Dropping the schema
-        Schema::drop('cars');
+        Schema::dropIfExists('cars');
     }
 }

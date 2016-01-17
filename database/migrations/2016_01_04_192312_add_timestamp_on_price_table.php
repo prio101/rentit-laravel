@@ -27,11 +27,6 @@ class AddTimestampOnPriceTable extends Migration
     public function down()
     {
         //Dropping the table column
-        Schema::table('price_table' , function(Blueprint $table){
-            $table->dropIfExists([
-                "updated_at",
-                "created_at"
-            ]);
-        });
+        Schema::dropIfExists('price_table');
     }
 }

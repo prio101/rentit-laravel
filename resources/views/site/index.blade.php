@@ -131,7 +131,7 @@
     <div class="container">
         <h1 class="display-3">Rent It</h1>
         <h2 class="m-b-3">Craft your journey .</h2>
-        <a class="btn btn-secondary-outline m-b-1" href="http://tympanus.net/codrops/?p=25217" role="button"><span class="icon-sketch"></span>Sketch included</a>
+        <a class="btn btn-secondary-outline m-b-1" href="{{url('admin')}}" role="button">Login Here</a>
         <ul class="nav nav-inline social-share">
             <li class="nav-item"><a class="nav-link" href="#"><span class="icon-twitter"></span> 1024</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><span class="icon-facebook"></span> 562</a></li>

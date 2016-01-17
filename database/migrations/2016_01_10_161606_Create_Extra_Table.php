@@ -28,6 +28,6 @@ class CreateExtraTable extends Migration
     public function down()
     {
         //Dropping the extra table
-        Schema::drop('extra_table');
+        Schema::dropIfExists('extra_table');
     }
 }

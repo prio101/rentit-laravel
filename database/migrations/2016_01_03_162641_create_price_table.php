@@ -30,6 +30,6 @@ class CreatePriceTable extends Migration
     public function down()
     {
         //Dropping the table schema
-        Schema::drop("price_table");
+        Schema::dropIfExists("price_table");
     }
 }

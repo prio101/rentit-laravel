@@ -19,11 +19,13 @@
 
                     <hr>
 
-                    {{--<div class="login-social-link centered">--}}
-                        {{--<p>or you can sign in via your social network</p>--}}
-                        {{--<button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>--}}
-                        {{--<button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>--}}
-                    {{--</div>--}}
+                    <div class="login-social-link centered">
+                        <p>or you can sign in via your social network</p>
+
+                        <a href="{{url('/facebook/authorize')}}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+                        <a href="{{url('/google/authorize')}}" class="btn btn-danger"><i class="fa fa-google"></i> Google</a>
+
+                    </div>
                     <div class="registration">
                         Don't have an account yet?<br/>
                         <a class="btn btn-theme03 btn-block " href="{{url('auth/register')}}">

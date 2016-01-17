@@ -28,6 +28,6 @@ class CreateProfileAdminTable extends Migration
     public function down()
     {
         //Dropping the table
-        Schema::drop("admin_profile_table");
+        Schema::dropIfExists("admin_profile_table");
     }
 }

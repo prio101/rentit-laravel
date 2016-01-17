@@ -25,9 +25,6 @@ class AddAvailabilityStatusOnCarTable extends Migration
      */
     public function down()
     {
-        Schema::table('cars', function (Blueprint $table) {
-            //Check and then drop the database table
-            Schema::dropIfExists('cars');
-        });
+        Schema::dropIfExists('cars');
     }
 }
