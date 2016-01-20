@@ -11,10 +11,10 @@
 |
 */
 
-//Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
-////    GET the route of the front site
-//    Route::GET('/' , 'siteController@index') ;
-//});
+Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
+//    GET the route of the front site
+    Route::GET('/' , 'siteController@index') ;
+});
 
 
 /*------------------------------------------------
@@ -216,8 +216,6 @@ Route::GET('google/login' , function(){
 
 
 
-/* API for front end V1*/
 
-Route::GET('/' , 'apiController@apiFetch' ) ;
-
-
+//api
+Route::GET('api/bookings' , 'Api\BookingsControler@getApi');

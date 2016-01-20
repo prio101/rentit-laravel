@@ -8,13 +8,13 @@
         <h3><i class="fa fa-square-o"></i>&nbsp;RentIt</h3><small>Main Board</small>
         <hr>
         <div class="row mt">
-            <div class="alert alert-info">
-                <p class="text-center">the graph and other data would be here ... needs api </p>
+            <div>
+                <canvas id="doughnut" width="400" height="400"></canvas>
             </div>
         </div>
-
+        <p>
+          
+        </p>
     </section><! --/wrapper -->
 </section><!-- /MAIN CONTENT -->
 @stop
-
-

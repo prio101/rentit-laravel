@@ -22,7 +22,8 @@
   "require": {
     "laravelcollective/html": "5.1.*",
     "adamwathan/eloquent-oauth-l5": "^0.4.2",
-    "barryvdh/laravel-debugbar": "^2.1"
+    "barryvdh/laravel-debugbar": "^2.1",
+    "khill/lavacharts" : "2.5.*"
   },
     "autoload": {
         "classmap": [

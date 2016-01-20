@@ -156,6 +156,9 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
 
 
+        /*lavacharts*/
+        "Khill\Lavacharts\Laravel\LavachartsServiceProvider",
+
 
 
     ],

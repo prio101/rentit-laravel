@@ -183,7 +183,31 @@
         $('select.styled').customSelect();
     });
 
+     var value = {{ $bookings->first()->id }} ;
+    //Script of graph
+    var Script = function () {
+
+
+
+
+        var doughnutData = [
+            {
+                value: value ,
+                color:"#1abc9c"
+            },
+            {
+                value: value ,
+                color:"#777"
+            }
+
+
+        ];
+
+        new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
+      }();
 </script>
+
+
 
 
 

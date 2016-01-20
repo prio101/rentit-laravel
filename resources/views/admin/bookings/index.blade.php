@@ -16,7 +16,9 @@
 
 
 
-
+        <div>
+            <canvas id="doughnut" width="400" height="400"></canvas>
+        </div>
 
         <div class="row mt">
             <div class="col-md-12">
