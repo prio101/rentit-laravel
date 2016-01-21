@@ -3,22 +3,65 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\AdminProfile;
+use App\Model\BookingsModel;
+use App\Model\CarsModel;
+use DebugBar\DataCollector\TimeDataCollector;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+
 
 class adminHomeController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * return the data for graph
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $admin = AdminProfile::all()->last() ;
-        return view('partials/index' , ['admin' =>$admin]) ;
+        $carbon = Carbon::now();
+
+        $admin          = AdminProfile::all()->last() ;
+
+        /*Cars Model On Service Graph*/
+        $carsLuxary     = CarsModel::all()->where('status' , '2' )->where('class','1')->count();
+        $carsMiddle     = CarsModel::all()->where('status' , '2' )->where('class','2')->count();
+        $carsComfort    = CarsModel::all()->where('status' , '2' )->where('class','3')->count();
+
+
+        /*Price Plan Most Popular*/
+        $pricePlan1 = BookingsModel::all()->where('price_plan' , '1')->count();
+        $pricePlan2 = BookingsModel::all()->where('price_plan' , '2')->count();
+        $pricePlan3 = BookingsModel::all()->where('price_plan' , '3')->count();
+
+
+        /*Bookings  Status*/
+
+        $completed  = BookingsModel::all()->where('status' , '1')->where('receive_date' , $carbon->subMonth())->count();
+        $onGoing    = BookingsModel::all()->where('status' , '2')->where('receive_date' , $carbon->subMonth())->count();
+        $upComing   = BookingsModel::all()->where('status' , '3')->where('receive_date' , $carbon->subMonth())->count();
+
+
+
+        return view('partials/index' ,
+                        [
+                            'admin' =>$admin ,
+
+                            'carsLuxary'    =>$carsLuxary ,
+                            'carsMiddle'    =>$carsMiddle,
+                            'carsComfort'   => $carsComfort,
+                            'pricePlan1'    => $pricePlan1,
+                            'pricePlan2'    => $pricePlan2,
+                            'pricePlan3'    => $pricePlan3,
+                            'carbon'        => $carbon,
+                            'completed'     => $completed,
+                            'onGoing'       => $onGoing,
+                            'upComing'      => $upComing
+                        ]) ;
+
     }
 
     /**

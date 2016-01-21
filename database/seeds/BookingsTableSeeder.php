@@ -30,7 +30,7 @@ class BookingsTableSeeder extends Seeder
             'leaving_place' => Faker\Provider\bn_BD\Address::state() ,
             'receive_date'  => \Faker\Provider\DateTime::date('Y-m-d') ,
             'leaving_date'  => \Faker\Provider\DateTime::dateTimeThisMonth() ,
-            'price_plan'    => random_int(1 , 10),
+            'price_plan'    => random_int(1 , 3),
             'promotion_code'=> random_int(10 , 20),
             'created_at'    => \Faker\Provider\DateTime::date('Y-m-d'),
             'updated_at'    => \Faker\Provider\DateTime::date('Y-m-d'),
