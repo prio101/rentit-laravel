@@ -4,10 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Model\AdminProfile;
 use App\Model\BookingsModel;
+use App\Model\CarsModel;
+use DebugBar\DataCollector\TimeDataCollector;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
+use App\Model\AdminHomeModel;
 
 class adminHomeController extends Controller
 {
@@ -18,9 +22,20 @@ class adminHomeController extends Controller
      */
     public function index()
     {
-        $admin = AdminProfile::all()->last() ;
-        $bookings = BookingsModel::all()->first();
-        return view('partials/index' , ['admin' =>$admin , 'booking' => $bookings]) ;
+        $admin          = AdminProfile::all()->last() ;
+        $bookings       = BookingsModel::all()->first();
+        $carsLuxary     = CarsModel::all()->keyBy('class',1)->count();
+        $carsMiddle     = CarsModel::all()->whereLoose('class' , 2)->count();
+        $carsComfort    = CarsModel::all()->whereLoose('class' , 3)->count();
+
+        return view('partials/index' ,
+                        [
+                            'admin' =>$admin ,
+                            'booking' => $bookings ,
+                            'carsLuxary'=>$carsLuxary ,
+                            'carsMiddle'=>$carsMiddle,
+                            'carsComfort' => $carsComfort
+                        ]) ;
 
     }
 

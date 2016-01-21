@@ -185,29 +185,26 @@
 
     var Script = function () {
 
-
+        var carsLuxary = {{$carsLuxary}};
+        var carsMiddle ={{$carsMiddle}} ;
+        var carsComfort = {{$carsComfort}} ;
         var doughnutData = [
             {
-                value: 300,
+                value: carsLuxary,
                 color:"#F7464A",
                 highlight: "#FF5A5E",
-                label: "Red"
+                label: "Luxary"
             },
             {
-                value : 50,
-                color : "#2ecc71"
+                value : carsMiddle,
+
+                color : "#2ecc71",
+                label: "Comfort"
             },
             {
-                value : 100,
-                color : "#3498db"
-            },
-            {
-                value : 40,
-                color : "#9b59b6"
-            },
-            {
-                value : 120,
-                color : "#34495e"
+                value : carsComfort,
+                color : "#3498db",
+                label: "Middle"
             }
 
         ];
@@ -235,6 +232,7 @@
             {
                 value: 30,
                 color:"#1abc9c"
+
             },
             {
                 value : 50,
@@ -289,7 +287,7 @@
             }
         ];
         var radarChartData = {
-            labels : ["","","","","","",""],
+            labels : ["Dhaka","Chittagong","Rajshahi","Syllet","Barisal","Rangpur","Kumilla"],
             datasets : [
                 {
                     fillColor : "rgba(220,220,220,0.5)",
@@ -311,7 +309,7 @@
         new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
         new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
         new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
-        new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
+
         new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
         new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
 
