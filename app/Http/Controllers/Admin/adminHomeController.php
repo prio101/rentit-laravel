@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Model\AdminProfile;
+use App\Model\BookingsModel;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,13 +13,15 @@ class adminHomeController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * return the data for graph
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         $admin = AdminProfile::all()->last() ;
-        return view('partials/index' , ['admin' =>$admin]) ;
+        $bookings = BookingsModel::all()->first();
+        return view('partials/index' , ['admin' =>$admin , 'booking' => $bookings]) ;
+
     }
 
     /**
