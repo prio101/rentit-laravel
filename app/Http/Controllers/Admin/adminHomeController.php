@@ -10,8 +10,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
-use App\Model\AdminHomeModel;
 
 class adminHomeController extends Controller
 {
@@ -22,19 +22,44 @@ class adminHomeController extends Controller
      */
     public function index()
     {
+        $carbon = Carbon::now();
+
         $admin          = AdminProfile::all()->last() ;
-        $bookings       = BookingsModel::all()->first();
-        $carsLuxary     = CarsModel::all()->keyBy('class',1)->count();
-        $carsMiddle     = CarsModel::all()->whereLoose('class' , 2)->count();
-        $carsComfort    = CarsModel::all()->whereLoose('class' , 3)->count();
+
+        /*Cars Model On Service Graph*/
+        $carsLuxary     = CarsModel::all()->where('status' , '2' )->where('class','1')->count();
+        $carsMiddle     = CarsModel::all()->where('status' , '2' )->where('class','2')->count();
+        $carsComfort    = CarsModel::all()->where('status' , '2' )->where('class','3')->count();
+
+
+        /*Price Plan Most Popular*/
+        $pricePlan1 = BookingsModel::all()->where('price_plan' , '1')->count();
+        $pricePlan2 = BookingsModel::all()->where('price_plan' , '2')->count();
+        $pricePlan3 = BookingsModel::all()->where('price_plan' , '3')->count();
+
+
+        /*Bookings  Status*/
+
+        $completed  = BookingsModel::all()->where('status' , '1')->where('receive_date' , $carbon->subMonth())->count();
+        $onGoing    = BookingsModel::all()->where('status' , '2')->where('receive_date' , $carbon->subMonth())->count();
+        $upComing   = BookingsModel::all()->where('status' , '3')->where('receive_date' , $carbon->subMonth())->count();
+
+
 
         return view('partials/index' ,
                         [
                             'admin' =>$admin ,
-                            'booking' => $bookings ,
-                            'carsLuxary'=>$carsLuxary ,
-                            'carsMiddle'=>$carsMiddle,
-                            'carsComfort' => $carsComfort
+
+                            'carsLuxary'    =>$carsLuxary ,
+                            'carsMiddle'    =>$carsMiddle,
+                            'carsComfort'   => $carsComfort,
+                            'pricePlan1'    => $pricePlan1,
+                            'pricePlan2'    => $pricePlan2,
+                            'pricePlan3'    => $pricePlan3,
+                            'carbon'        => $carbon,
+                            'completed'     => $completed,
+                            'onGoing'       => $onGoing,
+                            'upComing'      => $upComing
                         ]) ;
 
     }

@@ -103,10 +103,10 @@
                 </li>
 
                 {{--<li class="sub-menu">--}}
-                    {{--<a href="{{ url('admin/theme') }}" >--}}
-                        {{--<i class="fa fa-picture-o"></i>--}}
-                        {{--<span>Theme</span>--}}
-                    {{--</a>--}}
+                {{--<a href="{{ url('admin/theme') }}" >--}}
+                {{--<i class="fa fa-picture-o"></i>--}}
+                {{--<span>Theme</span>--}}
+                {{--</a>--}}
 
                 {{--</li>--}}
 
@@ -142,7 +142,7 @@
 
     {{--End of the content--}}
 
-    <!--footer start-->
+            <!--footer start-->
     <footer class="site-footer">
         <div class="text-center">
             Copyright:2015 &copy; <a href="{{ url('/admin') }}"><b>RentIt</b></a>
@@ -172,8 +172,8 @@
 <script src="{{ asset('assets/js/app.js') }}"></script>
 
 <script src="{{ asset('assets/js/chart-master/Chart.js') }}"></script>
-
-<!--script for this page-->
+{{--<script src="{{ asset('assets/js/chartjs-conf.js') }}"></script>--}}
+        <!--script for this page-->
 <script src="{{ asset('assets/js/morris-conf.js') }}"></script>
 
 
@@ -187,60 +187,64 @@
 
     var Script = function () {
 
+        var carsLuxary = {{$carsLuxary}} ;
+        var carsMiddle ={{$carsMiddle}} ;
+        var carsComfort = {{$carsComfort}} ;
 
+        var pricePlan1 = {{$pricePlan1}} ;
+        var pricePlan2 = {{$pricePlan2}} ;
+        var pricePlan3 = {{$pricePlan3}} ;
+
+        var completed = {{$completed}}
+        var onGoing   = {{$onGoing}}
+        var upComing  = {{$upComing}}
 
         var doughnutData = [
             {
-                value: 100,
+                value: carsLuxary,
                 color:"#F7464A",
                 highlight: "#FF5A5E",
                 label: "Luxary"
             },
             {
-                value : 12,
+                value : carsMiddle,
 
                 color : "#2ecc71",
                 label: "Comfort"
             },
             {
-                value : 2,
+                value : carsComfort,
                 color : "#3498db",
                 label: "Middle"
             }
 
         ];
         var lineChartData = {
-            labels : ["","","","","","",""],
+            labels : ["Upcoming","Completed","Ongoing"],
             datasets : [
                 {
                     fillColor : "rgba(220,220,220,0.5)",
                     strokeColor : "rgba(220,220,220,1)",
                     pointColor : "rgba(220,220,220,1)",
                     pointStrokeColor : "#fff",
-                    data : [65,59,90,81,56,55,40]
-                },
-                {
-                    fillColor : "rgba(151,187,205,0.5)",
-                    strokeColor : "rgba(151,187,205,1)",
-                    pointColor : "rgba(151,187,205,1)",
-                    pointStrokeColor : "#fff",
-                    data : [28,48,40,19,96,27,100]
+                    data : [upComing,onGoing,completed]
                 }
+
             ]
 
         };
         var pieData = [
             {
-                value: 12,
+                value: pricePlan1,
                 color:"#1abc9c"
 
             },
             {
-                value : 0,
+                value : pricePlan2,
                 color : "#16a085"
             },
             {
-                value : 0,
+                value : pricePlan3,
                 color : "#27ae60"
             }
 

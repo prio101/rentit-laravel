@@ -31,8 +31,8 @@
                         <tr>
                             <th><i class="fa fa-bullhorn"></i>&nbsp;Client ID</th>
                             <th class="hidden-phone"><i class="fa fa-question-circle"></i>&nbsp;Car ID</th>
-                            <th><i class="fa fa-bookmark"></i>&nbsp;Receive Place</th>
-                            <th><i class=" fa fa-edit"></i>&nbsp;Leaving Place</th>
+                            <th><i class="fa fa-bookmark"></i>&nbsp;Receive Branch</th>
+                            <th><i class=" fa fa-edit"></i>&nbsp;Leaving Branch</th>
                             <th><i class="fa fa-menu">&nbsp;Receive Date</i></th>
                             <th><i class="fa fa-menu"></i>&nbsp;Leaving Date</th>
                             <th><i class="fa fa-menu"></i>&nbsp;Price Plan</th>
