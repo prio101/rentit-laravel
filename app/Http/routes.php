@@ -53,6 +53,8 @@ Route::group(['prefix' => '' , 'namespace' => 'Site'],function(){
         Route::group(['prefix' => 'bookings', 'namespace' => 'Bookings'], function () {
 //       GET the route of the Admin Bookings Panel
             Route::get('/', 'bookingsController@index');
+//       GET the route for the to excel data sheet
+            Route::get('/excel' , 'bookingsController@excel');
 
 //        GET the bookings Completed filter
             Route::get('/completed', 'bookingsController@completedList');

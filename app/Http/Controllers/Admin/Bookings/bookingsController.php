@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Bookings;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Maatwebsite\Excel\Excel;
+
 
 
 class bookingsController extends Controller
@@ -30,6 +33,34 @@ class bookingsController extends Controller
 
            return view('admin.bookings.index', ['bookings' => $bookings, 'admin' => $admin]);
 
+    }
+
+    /**
+     * Export to Excel data sheet
+     *
+     * @return \Maatwebsite\Excel\Excel
+     * */
+    public function excel(Excel $xls){
+        $carbon = Carbon::now();
+
+
+//        $doc  = $excel->create('Bookings-Excel-Sheet'.$carbon , function($excel){
+//            $excel->sheet('Bookings-excel-sheet' , function($sheet){
+//
+//                $bookings = BookingsModel::all();
+//                $sheet->loadView('admin/bookings/partials/bookings-part',['bookings' => $bookings ]);
+//            });
+//        });
+
+         $doc = $xls->create('Bookings-Excel'.$carbon , function($excel){
+             $excel->sheet('booking' , function($sheet){
+                 $bookings = BookingsModel::all();
+                 $sheet->loadView('admin.bookings.partials.bookings-part',['bookings' => $bookings ]);
+             });
+
+         })->download();
+
+        return $doc;
     }
 
     /*

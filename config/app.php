@@ -156,7 +156,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
 
         //Excel
-        //'Maatwebsite\Excel\ExcelServiceProvider',
+        'Maatwebsite\Excel\ExcelServiceProvider',
 
 
 
@@ -214,12 +214,12 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-
+        /*Social Auth Eloquent*/
         'SocialAuth' => 'AdamWathan\EloquentOAuth\Facades\OAuth',
-
+        /*Laravel Debugger*/
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
-        //'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+        /*Excel Plugin*/
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
 
     ],

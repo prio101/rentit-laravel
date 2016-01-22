@@ -10,15 +10,17 @@
     <section class="wrapper site-min-height">
         <h3><i class="fa fa-square-o"></i>&nbsp;Bookings</h3><small>Rent It System</small>
         <hr>
-        <div>
-            <span><a href="{{url('admin/bookings/add')}}" class="btn btn-primary btn-theme btn-lg" data-toggle="tooltip" title="Add New"><i class="fa fa-plus "></i>&nbsp; Add New</a></span>
+        <div class="col-md-12">
+
+                <span class="pull-left"><a href="{{url('admin/bookings/add')}}" class="btn btn-primary btn-theme btn-lg" data-toggle="tooltip" title="Add New"><i class="fa fa-plus "></i>&nbsp; Add New</a></span>
+
+
+                <span class="pull-right"><a href="{{url('admin/bookings/excel')}}" class="btn btn-primary btn-theme btn-lg" data-toggle="tooltip" title="Export To Excel Data Sheet"><i class="fa fa-file-excel-o"></i>&nbsp; Export To Excel</a></span>
+
+
         </div>
 
 
-
-        <div>
-            <canvas id="doughnut" width="400" height="400"></canvas>
-        </div>
 
         <div class="row mt">
             <div class="col-md-12">
@@ -43,38 +45,38 @@
                         </thead>
                         <tbody>
 
-                            @foreach($bookings as $booking)
+                        @foreach($bookings as $booking)
                             <tr>
-                            <td><a href="basic_table.html#">{{$booking->client_id}}</a></td>
-                            <td class="hidden-phone">{{$booking->car_id}}</td>
-                            <td>{{$booking->receive_place}}</td>
+                                <td><a href="basic_table.html#">{{$booking->client_id}}</a></td>
+                                <td class="hidden-phone">{{$booking->car_id}}</td>
+                                <td>{{$booking->receive_place}}</td>
 
-                            <td>{{$booking->leaving_place}}</td>
-                            <td>{{$booking->receive_date}}</td>
-                            <td>{{$booking->leaving_date}}</td>
-                            <td>{{$booking->price_plan}}</td>
-                            <td>{{$booking->promotion_code}}</td>
-                            <td>
-                                @if($booking->status == 1)
-                                    <span class="label label-success label-mini">Completed</span>
+                                <td>{{$booking->leaving_place}}</td>
+                                <td>{{$booking->receive_date}}</td>
+                                <td>{{$booking->leaving_date}}</td>
+                                <td>{{$booking->price_plan}}</td>
+                                <td>{{$booking->promotion_code}}</td>
+                                <td>
+                                    @if($booking->status == 1)
+                                        <span class="label label-success label-mini">Completed</span>
                                     @elseif($booking->status == 2)
-                                    <span class="label label-warning label-mini">On Service</span>
+                                        <span class="label label-warning label-mini">On Service</span>
                                     @elseif($booking->status == 3)
-                                    <span class="label label-info label-mini">Upcoming</span>
-                                @endif
-                            </td>
-                            <td>
+                                        <span class="label label-info label-mini">Upcoming</span>
+                                    @endif
+                                </td>
+                                <td>
 
 
                                     <a href="{{ url('admin/bookings/'.$booking->id.'/edit') }}" class="btn btn-primary btn-xs">Edit</a>
 
-                                {!! Form::open(array('url'=>'admin/bookings/delete/'.$booking->id )) !!}
+                                    {!! Form::open(array('url'=>'admin/bookings/delete/'.$booking->id )) !!}
                                     {!! Form::hidden('_method' , 'DELETE') !!}
                                     {!! Form::submit('Delete' , array('class'=>'btn btn-warning btn-xs')) !!}
-                                {!! Form::close() !!}
-                            </td>
+                                    {!! Form::close() !!}
+                                </td>
                             </tr>
-                            @endforeach
+                        @endforeach
 
 
                         </tbody>
