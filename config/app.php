@@ -155,9 +155,11 @@ return [
         /*Laravel Debugger*/
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        //Excel
+        //'Maatwebsite\Excel\ExcelServiceProvider',
 
-        /*lavacharts*/
-        "Khill\Lavacharts\Laravel\LavachartsServiceProvider",
+
+
 
 
 
@@ -216,6 +218,8 @@ return [
         'SocialAuth' => 'AdamWathan\EloquentOAuth\Facades\OAuth',
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        //'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
 
     ],
