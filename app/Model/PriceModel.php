@@ -13,4 +13,17 @@ class PriceModel extends Model
      * Mass Assignable Fields
      * */
     protected $fillable = ['name' , 'amount' , 'mileage' , 'special'] ;
+
+
+    /**
+     * Listing of the first three price panel
+     *
+     * @param void
+     * @return Json
+     * */
+    public function firstThreePricePanel(){
+        $price = self::having('id' , '<=' , 3)->get();
+
+        return $price;
+    }
 }

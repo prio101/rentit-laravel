@@ -10,11 +10,15 @@ class CarsModel extends Model
     protected $table = 'cars';
 
 
-    public function getLuxaryCars(){
-        $cars = $this->all();
+    /**
+     *  Getting listing of the all cars
+     *  @param Void
+     *  @return Json
+     * */
 
-        $cars->whereLoose('status' , 2);
-        return $cars;
+    public function allCarsList(){
+        $cars = CarsModel::all();
+
+        return $cars ;
     }
-
 }

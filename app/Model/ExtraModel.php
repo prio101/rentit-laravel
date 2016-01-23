@@ -11,4 +11,16 @@ class ExtraModel extends Model
 
 //    Fillable fields
     protected $fillable =['about' , 'contact'] ;
+
+
+    /**
+     *  Extra Page Data as listing
+     * @return Json
+     * */
+    public function allExtradata()
+    {
+      $extra = ExtraModel::all();
+
+        return $extra;
+    }
 }

@@ -14,4 +14,14 @@ class BookingsModel extends Model
      * */
     protected $fillable = ['client_id' , 'car_id' , 'receive_place' , 'leaving_place' , 'receive_date' , 'leaving_date' ,'price_plan' , 'promotion_code' ] ;
 
+    /**
+     *  Getting all the bookings data listing
+     *  @return resource
+     * */
+
+    public function allBookingsListing(){
+        $bookings = BookingsModel::all();
+
+        return $bookings ;
+    }
 }

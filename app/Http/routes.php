@@ -218,6 +218,25 @@ Route::GET('google/login' , function(){
 
 
 
+// API Version 1.0
 
-//api
-Route::GET('api/bookings' , 'Api\BookingsControler@getApi');
+Route::group(['prefix'=>'api/v1', 'namespace' => 'Api\V1' ] , function(){
+    /*Getting json bookings data*/
+    Route::GET('/bookings' , 'ApiController@bookingsApi');
+
+    /*Getting json cars listing */
+    Route::GET('/cars' , 'ApiController@carsApi');
+
+    /*Getting the json price listing*/
+    Route::GET('/price' , 'ApiController@priceApi');
+
+
+    /*Getting Extra Data listing*/
+    Route::GET('/extra' , 'ApiController@extraApi');
+
+
+    /*Posting the Data taken from the bookings form*/
+    Route::POST('/bookings_submit' , 'ApiController@bookingSubmitApi');
+});
+
+
