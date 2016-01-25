@@ -1,0 +1,26 @@
+{
+  "name": "rentit",
+  "description": "This is a Rent It Service Bower Pacakge",
+  "main": "",
+  "authors": [
+    "prio101 <miprio101@gmail.com>"
+  ],
+  "license": "GPL2.0",
+  "moduleType": [],
+  "homepage": "rentit.dev",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0"
+  }
+}
