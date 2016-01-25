@@ -251,46 +251,25 @@
 <!-- Testimonials
 ================================================== -->
 
-<section class="section-testimonials text-xs-center bg-inverse">
+<section class="section-testimonials text-xs-center bg-inverse" ng-controller="carsController">
     <div class="container">
         <h3 class="sr-only">Testimonials</h3>
         <div id="carousel-testimonials" class="carousel slide" data-ride="carousel" data-interval="0">
-            <div class="carousel-inner" role="listbox">
+
+
+            <div class="carousel-inner" role="listbox" ng-repeat="car in cars">
+
                 <div class="carousel-item active">
                     <blockquote class="blockquote">
                         <img src="{{asset('assets/img/face1.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
-                        <p class="h3">Good design at the front-end suggests that everything is in order at the back-end, whether or not that is the case.</p>
-                        <footer>Dmitry Fadeyev</footer>
+                        <p class="h3">{[{ car.name }]}</p>
+                        <footer>{[{ car.class }]}</footer>
                     </blockquote>
                 </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote">
-                        <img src="{{asset('assets/img/face2.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
-                        <p class="h3">It’s not about knowing all the gimmicks and photo tricks. If you haven’t got the eye, no program will give it to you.</p>
-                        <footer>David Carson</footer>
-                    </blockquote>
-                </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote">
-                        <img src="{{asset('assets/img/face3.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
-                        <p class="h3">There’s a point when you’re done simplifying. Otherwise, things get really complicated.</p>
-                        <footer>Frank Chimero</footer>
-                    </blockquote>
-                </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote">
-                        <img src="{{asset('assets/img/face4.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
-                        <p class="h3">Designing for clients that don’t appreciate the value of design is like buying new tires for a rental car.</p>
-                        <footer>Joel Fisher</footer>
-                    </blockquote>
-                </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote">
-                        <img src="{{asset('assets/img/face5.jpg')}}" height="80" width="80" alt="Avatar" class="img-circle">
-                        <p class="h3">Every picture owes more to other pictures painted before than it owes to nature.</p>
-                        <footer>E.H. Gombrich</footer>
-                    </blockquote>
-                </div>
+
+
+
+
             </div>
             <ol class="carousel-indicators">
                 <li class="active"><img src="{{asset('assets/img/face1.jpg')}}" alt="Navigation avatar" data-target="#carousel-testimonials" data-slide-to="0" class="img-fluid img-circle"></li>

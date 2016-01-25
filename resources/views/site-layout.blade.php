@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="rentItApp">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,6 +68,15 @@
 
 {{--Adding the angular scripts--}}
 <script src="/bower/angular/angular.min.js"></script>
+{{--Angular Route--}}
+<script src="/bower/angular-route/angular-route.min.js"></script>
+{{--Angular Mocks--}}
+<script src="/bower/angular-mocks/angular-mocks.js"></script>
+
+{{--app js--}}
+<script src="/app.js"></script>
+{{--Controller js files--}}
+<script src="/carsController.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="{{asset('assets/js/landio.min.js')}}"></script>
