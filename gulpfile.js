@@ -12,7 +12,19 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+    /*Mixing the sass file*/
     mix.sass('app.scss');
 
+    /*
+    *  Mixing the javascript files
+    *  And returning the compressed file into
+    *  public folder
+    * */
+    mix.scripts([
+        'angular/app.js' ,
+        'angular/controllers/carsController.js' ,
+        'angular/controllers/extraController.js' ,
+        'angular/controllers/priceController.js'
+        ] , 'public/assets/js/');
 
 });

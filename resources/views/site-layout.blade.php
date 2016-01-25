@@ -1,84 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="rentItApp">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>RENT IT</title>
-    <meta name="description" content="A free HTML template and UI Kit built on Bootstrap" />
-    <meta name="keywords" content="free html template, bootstrap, ui kit, sass" />
-    <meta name="author" content="Peter Finlan and Taty Grassini Codrops" />
-    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('assets/img/favicon/apple-touch-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('assets/img/favicon/apple-touch-icon-60x60.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/img/favicon/apple-touch-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/favicon/apple-touch-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('assets/img/favicon/apple-touch-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('assets/img/favicon/apple-touch-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('assets/img/favicon/apple-touch-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('assets/img/favicon/apple-touch-icon-152x152.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/img/favicon/apple-touch-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/favicon-32x32.png')}}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/android-chrome-192x192.png')}}" sizes="192x192">
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/favicon-96x96.png')}}" sizes="96x96">
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon/favicon-16x16.png')}}" sizes="16x16">
-    <link rel="manifest" href="{{asset('assets/img/favicon/manifest.json')}}">
-    <link rel="shortcut icon" href="{{asset('assets/img/favicon/favicon.ico')}}">
-    <meta name="msapplication-TileColor" content="#663fb5">
-    <meta name="msapplication-TileImage" content="{{asset('assets/img/favicon/mstile-144x144.png')}}">
-    <meta name="msapplication-config" content="{{asset('assets/img/favicon/browserconfig.xml')}}">
-    <meta name="theme-color" content="#663fb5">
-    <link rel="stylesheet" href="{{asset('assets/css/landio.css')}}">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | Triangle</title>
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/lightbox.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="{{ asset('assets/js/html5shiv.js') }}"></script>
+    <script src="{{ asset('assets/js/respond.min.js') }}"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="{{ asset('assets/images/ico/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/images/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/images/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/images/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/ico/apple-touch-icon-57-precomposed.png') }}">
+</head><!--/head-->
 
 <body>
 
 @yield('content')
 
 
-<!-- Footer
-================================================== -->
-
-<footer class="section-footer bg-inverse" role="contentinfo">
+<footer id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-5">
-                <div class="media">
-                    <div class="media-left">
-                        <span class="media-object icon-logo display-1"></span>
+            <div class="col-sm-12 text-center bottom-separator">
+                <img src="{{ asset('assets/images/home/under.png') }}" class="img-responsive inline" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="testimonial bottom">
+                    <h2>Testimonial</h2>
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="{{ asset('assets/images/home/profile1.png') }}" alt=""></a>
+                        </div>
+                        <div class="media-body">
+                            <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
+                            <h3><a href="#">- Jhon Kalis</a></h3>
+                        </div>
                     </div>
-                    <small class="media-body media-bottom">
-                        &copy; Land.io 2015. <br>
-                        Designed by Peter Finlan, developed by Taty Grassini, exclusively for Codrops.
-                    </small>
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="{{ asset('assets/images/home/profile2.png') }}" alt=""></a>
+                        </div>
+                        <div class="media-body">
+                            <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
+                            <h3><a href="">- Abraham Josef</a></h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-7">
-                <ul class="nav nav-inline">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index-carousel.html"><small>NEW</small> Slides<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="ui-elements.html">UI Kit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/tatygrassini/landio-html" target="_blank">GitHub</a></li>
-                    <li class="nav-item"><a class="nav-link scroll-top" href="#totop">Back to top <span class="icon-caret-up"></span></a></li>
-                </ul>
+            <div class="col-md-3 col-sm-6">
+                <div class="contact-info bottom">
+                    <h2>Contacts</h2>
+                    <address>
+                        E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>
+                        Phone: +1 (123) 456 7890 <br>
+                        Fax: +1 (123) 456 7891 <br>
+                    </address>
+
+                    <h2>Address</h2>
+                    <address>
+                        Unit C2, St.Vincent's Trading Est., <br>
+                        Feeder Road, <br>
+                        Bristol, BS2 0UY <br>
+                        United Kingdom <br>
+                    </address>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="contact-form bottom">
+                    <h2>Send a message</h2>
+                    <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="copyright-text text-center">
+                    <p>&copy; Your Company 2014. All Rights Reserved.</p>
+                    <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+                </div>
             </div>
         </div>
     </div>
 </footer>
+<!--/#footer-->
 
-{{--Adding the angular scripts--}}
-<script src="/bower/angular/angular.min.js"></script>
-{{--Angular Route--}}
-<script src="/bower/angular-route/angular-route.min.js"></script>
-{{--Angular Mocks--}}
-<script src="/bower/angular-mocks/angular-mocks.js"></script>
-
-{{--app js--}}
-<script src="/app.js"></script>
-{{--Controller js files--}}
-<script src="/carsController.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="{{asset('assets/js/landio.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/lightbox.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/wow.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 </html>
