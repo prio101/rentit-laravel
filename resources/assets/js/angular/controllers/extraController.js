@@ -9,7 +9,7 @@ app.controller("extraController" , function($scope , $http , API_URL){
         *   Extra Data from the api
          *   @return json
         * */
-        $http.get(API_URL+'extra').suceess(function(response){
+        $http.get(API_URL+'extra').success(function(response){
             $scope.extra = response ;
         });
 });

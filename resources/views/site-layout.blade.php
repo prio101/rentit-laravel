@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="rentItApp">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,6 +105,11 @@
     </div>
 </footer>
 <!--/#footer-->
+
+{{--angular--}}
+<script src="bower/angular/angular.min.js"></script>
+<script src="bower/angular-route/angular-route.js"></script>
+<script src="{{asset('assets/js/all.js')}}"></script>
 
 <script type="text/javascript" src="{{ asset('assets/js/jquery.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
