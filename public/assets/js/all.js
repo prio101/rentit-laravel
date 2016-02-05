@@ -6,7 +6,7 @@
 var app = angular.module('rentItApp' , ['ngRoute']);
 
 app.config(function($interpolateProvider){
-    $interpolateProvider.startSymbol("{[{").endSymbol("}]}");
+    $interpolateProvider.startSymbol("<%=").endSymbol("%>");
 });
 
 app.constant('API_URL' , 'http://rentit.dev/api/v1/');
@@ -37,7 +37,7 @@ app.controller("extraController" , function($scope , $http , API_URL){
         *   Extra Data from the api
          *   @return json
         * */
-        $http.get(API_URL+'extra').success(function(response){
+        $http.get(API_URL+'extra').suceess(function(response){
             $scope.extra = response ;
         });
 });

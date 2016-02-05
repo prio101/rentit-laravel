@@ -6,22 +6,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | Triangle</title>
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/lightbox.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('site_assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('site_assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('site_assets/css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('site_assets/css/lightbox.css') }}" rel="stylesheet">
+    <link href="{{ asset('site_assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('site_assets/css/responsive.css') }}" rel="stylesheet">
 
     <!--[if lt IE 9]>
-    <script src="{{ asset('assets/js/html5shiv.js') }}"></script>
-    <script src="{{ asset('assets/js/respond.min.js') }}"></script>
+    <script src="{{ asset('site_site_assets/js/html5shiv.js') }}"></script>
+    <script src="{{ asset('site_assets/js/respond.min.js') }}"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="{{ asset('assets/images/ico/favicon.ico') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/images/ico/apple-touch-icon-144-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/images/ico/apple-touch-icon-114-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/images/ico/apple-touch-icon-72-precomposed.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/ico/apple-touch-icon-57-precomposed.png') }}">
+    <link rel="shortcut icon" href="{{ asset('site_assets/images/ico/favicon.ico') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('site_assets/images/ico/apple-touch-icon-144-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('site_assets/images/ico/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('site_assets/images/ico/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('site_assets/images/ico/apple-touch-icon-57-precomposed.png') }}">
 </head><!--/head-->
 
 <body>
@@ -33,47 +33,29 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center bottom-separator">
-                <img src="{{ asset('assets/images/home/under.png') }}" class="img-responsive inline" alt="">
+                <img src="{{ asset('site_assets/images/home/under.png') }}" class="img-responsive inline" alt="">
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="testimonial bottom">
-                    <h2>Testimonial</h2>
+
                     <div class="media">
                         <div class="pull-left">
-                            <a href="#"><img src="{{ asset('assets/images/home/profile1.png') }}" alt=""></a>
+                            <a href="#"><img src="{{ asset('assets/img/cars/6-car-image.png') }}" alt=""></a>
                         </div>
-                        <div class="media-body">
-                            <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
-                            <h3><a href="#">- Jhon Kalis</a></h3>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="pull-left">
-                            <a href="#"><img src="{{ asset('assets/images/home/profile2.png') }}" alt=""></a>
-                        </div>
-                        <div class="media-body">
-                            <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
-                            <h3><a href="">- Abraham Josef</a></h3>
-                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="contact-info bottom">
-                    <h2>Contacts</h2>
+                    <h2 id="contact">Contacts</h2>
                     <address>
-                        E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>
-                        Phone: +1 (123) 456 7890 <br>
-                        Fax: +1 (123) 456 7891 <br>
+                        @if($extra)
+                            {{$extra->contact}}
+                        @endif
                     </address>
 
-                    <h2>Address</h2>
-                    <address>
-                        Unit C2, St.Vincent's Trading Est., <br>
-                        Feeder Road, <br>
-                        Bristol, BS2 0UY <br>
-                        United Kingdom <br>
-                    </address>
+
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
@@ -109,12 +91,12 @@
 {{--angular--}}
 <script src="bower/angular/angular.min.js"></script>
 <script src="bower/angular-route/angular-route.js"></script>
-<script src="{{asset('assets/js/all.js')}}"></script>
+<script src="{{asset('site_assets/js/all.js')}}"></script>
 
-<script type="text/javascript" src="{{ asset('assets/js/jquery.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/lightbox.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/wow.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+<script type="text/javascript" src="{{ asset('site_assets/js/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('site_assets/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('site_assets/js/lightbox.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('site_assets/js/wow.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('site_assets/js/main.js') }}"></script>
 </body>
 </html>
