@@ -23,4 +23,6 @@ class ExtraModel extends Model
 
         return $extra;
     }
+
+
 }

@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Model\CarsModel;
+use App\Model\ExtraModel;
+use App\Model\PriceModel;
+
+
 class siteController extends Controller
 {
     /**
@@ -16,8 +21,26 @@ class siteController extends Controller
      */
     public function index()
     {
-        //Return view
-        return view('site.index');
+        /*
+         * car data
+         * */
+        $car = new CarsModel();
+        $carsAll = $car->allCarsList();
+
+        /*
+         * Extra Data
+         * */
+        $extra = new ExtraModel();
+        $extraAll = $extra->allExtradata();
+
+        /*
+         * PriceData
+         * */
+        $price = new PriceModel();
+        $threePricePanels = $price->firstThreePricePanel();
+
+        //Return view with data
+        return view('site.index' , ['cars' =>$carsAll , 'extra'=>$extraAll , 'threePricePanel' => $threePricePanels  ]);
     }
 
 

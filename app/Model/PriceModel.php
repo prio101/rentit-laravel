@@ -26,4 +26,6 @@ class PriceModel extends Model
 
         return $price;
     }
+
+
 }
