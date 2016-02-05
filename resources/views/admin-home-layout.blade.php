@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     <!--external css-->
-    <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ asset('old_assets') }}" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
