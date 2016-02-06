@@ -2,7 +2,7 @@
 
 ---
 
-**READ CAREFULLY**
+This is a Management Booking system made with Laravel 5.1.
 
 ## Installation
 ---
@@ -19,3 +19,12 @@ steps:
 3. run `php artisan serve`
 
 To get more info visit laravel docs.
+
+
+# Screenshot
+
+![Front-View](readme-pic/front.png)
+
+![Login-View](readme-pic/login.png)
+
+![dashboard-View](readme-pic/dashboard.png)
