@@ -1,0 +1,6 @@
+{
+  "name": "Rentit-laravel",
+  "tagline": "Laravel 5.1 Management Platform ",
+  "body": "RentIt\r\nThis is a Management Booking system made with Laravel 5.1.\r\n\r\nInstallation\r\n\r\nPrerequisite : node , composer , lamp\r\n\r\nsteps:\r\n\r\nrun php artisan migrate\r\n\r\nrun php artisan db:seed\r\n\r\nrun php artisan serve\r\n\r\nTo get more info visit laravel docs.\r\n![home](https://raw.githubusercontent.com/prio101/rentit-laravel/master/readme-pic/front.png)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
